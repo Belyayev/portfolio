@@ -1,31 +1,46 @@
+/*
+start by reseting all elements to have no margin or padding
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: min-content 1fr min-content;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background-color: lightgray;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  background-color: lightskyblue;
+  grid-column-start: 4;
+  grid-column-end: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav {
+  background-color: linen;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+  background-color: lightgray;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 @keyframes App-logo-spin {

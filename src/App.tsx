@@ -1,11 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>We are going to have CSS grid here</h1>
+      <header>header</header>
+      <nav>side nav</nav>
+      <main>main</main>
+      <footer>footer</footer>
     </div>
   );
 }
