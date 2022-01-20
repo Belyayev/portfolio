@@ -22,6 +22,7 @@ body {
     "h h h h h h h h h h h h"
     "n n n m m m m m m m m m"
     "f f f f f f f f f f f f";
+  justify-content: center;
 }
 
 header {
@@ -44,8 +45,13 @@ footer {
   grid-area: f;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
 .text {
-  text-align: center;
   background-color: lime;
   margin: 0.3rem;
+  padding: 0 1rem;
 }
