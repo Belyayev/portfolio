@@ -15,39 +15,37 @@ body {
 .App {
   height: 100vh;
   display: grid;
+  gap: 0.3rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "n n n m m m m m m m m m"
+    "f f f f f f f f f f f f";
 }
 
 header {
   background-color: lightgray;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-area: h;
 }
 
 main {
   background-color: lightskyblue;
-  grid-column-start: 4;
-  grid-column-end: -1;
+  grid-area: m;
 }
 
 nav {
   background-color: linen;
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-area: n;
 }
 
 footer {
   background-color: lightgray;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-area: f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text {
+  text-align: center;
+  background-color: lime;
+  margin: 0.3rem;
 }
