@@ -1,21 +1,12 @@
-/*
-Sci-Fi styled react component button
-made using SVG with animations on hover and click
-it takes optional parameters for size, color and text
-all functionality is packed into single component file
---------------------------------------------
-import SvgButton from "./SvgButton";
-<SvgButton text="home" color="red" x={100} y={30} />
---------------------------------------------
-https://github.com/Belyayev/svg-payground
-*/
-
-import { useState } from "react";
+import SVGDialCircle from "../components/SvgDialCircle";
 
 function Skills() {
   return (
-    <div>
-      <h1>Skills page</h1>
+    <div className="skills">
+      <SVGDialCircle color="rgb(45, 213, 255)" />
+      <SVGDialCircle color="rgb(45, 213, 255)" />
+      <SVGDialCircle color="rgb(45, 213, 255)" />
+      <SVGDialCircle color="rgb(45, 213, 255)" />
     </div>
   );
 }
