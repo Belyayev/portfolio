@@ -13,7 +13,6 @@ function App() {
       <main>
         <h1 className="text">main section</h1>
         <h1 className="text">main section</h1>
-        <h1 className="text">main section</h1>
       </main>
       <footer>
         <div className="footer">
