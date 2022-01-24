@@ -36,6 +36,11 @@ header {
 
 main {
   grid-area: m;
+  justify-self: center;
+}
+.main {
+  color: rgb(45, 213, 255);
+  width: 60rem;
 }
 
 footer {

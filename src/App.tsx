@@ -1,27 +1,53 @@
-import React from "react";
 import "./App.css";
 import SvgButton from "./components/SvgButton";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Bio from "./pages/Bio";
+import Skills from "./pages/Skills";
+import Contacts from "./pages/Contacts";
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <div className="header">
-          <SvgButton color="rgb(45, 213, 255)" text="HOME" x={110} />
-          <SvgButton color="rgb(45, 213, 255)" text="PROJECTS" x={140} />
-          <SvgButton color="rgb(45, 213, 255)" text="ABOUT" x={110} />
-          <SvgButton color="rgb(45, 213, 255)" text="CONTACT" x={120} />
-        </div>
-      </header>
-      <main>
-        <h1 className="text">main section</h1>
-        <h1 className="text">main section</h1>
-      </main>
-      <footer>
-        <div className="footer">
-          <h1 className="text">footer</h1>
-        </div>
-      </footer>
+      <BrowserRouter>
+        <header>
+          <div className="header">
+            <Link to="/">
+              <SvgButton color="rgb(45, 213, 255)" text="HOME" x={100} />
+            </Link>
+            <Link to="/projects">
+              <SvgButton color="rgb(45, 213, 255)" text="PROJECTS" x={140} />
+            </Link>
+            <Link to="/bio">
+              <SvgButton color="rgb(45, 213, 255)" text="BIO" x={80} />
+            </Link>
+            <Link to="/skills">
+              <SvgButton color="rgb(45, 213, 255)" text="SKILLS" x={110} />
+            </Link>
+            <Link to="/contacts">
+              <SvgButton color="rgb(45, 213, 255)" text="CONTACTS" x={120} />
+            </Link>
+          </div>
+        </header>
+        <main>
+          <div className="main">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/bio" element={<Bio />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/contacts" element={<Contacts />} />
+            </Routes>
+          </div>
+        </main>
+        <footer>
+          <div className="footer">
+            <h1 className="text">footer</h1>
+          </div>
+        </footer>
+      </BrowserRouter>
     </div>
   );
 }
