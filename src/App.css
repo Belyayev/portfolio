@@ -41,6 +41,8 @@ main {
 .main {
   color: rgb(45, 213, 255);
   width: 60rem;
+  display: flex;
+  flex-direction: column;
 }
 .skills {
   display: flex;
