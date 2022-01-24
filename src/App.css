@@ -20,28 +20,25 @@ body {
   grid-template-rows: min-content 1fr min-content;
   grid-template-areas:
     "h h h h h h h h h h h h"
-    "n n n m m m m m m m m m"
+    "m m m m m m m m m m m m"
     "f f f f f f f f f f f f";
   justify-content: center;
 }
 
 header {
-  background-color: lightgray;
   grid-area: h;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 main {
-  background-color: lightskyblue;
   grid-area: m;
 }
 
-nav {
-  background-color: linen;
-  grid-area: n;
-}
-
 footer {
-  background-color: lightgray;
   grid-area: f;
 }
 
@@ -51,7 +48,6 @@ footer {
 }
 
 .text {
-  background-color: lime;
   margin: 0.3rem;
   padding: 0 1rem;
 }

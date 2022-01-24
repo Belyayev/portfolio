@@ -1,15 +1,18 @@
 import React from "react";
 import "./App.css";
+import SvgButton from "./components/SvgButton";
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="text">header</h1>
+        <div className="header">
+          <SvgButton color="rgb(45, 213, 255)" text="HOME" x={110} />
+          <SvgButton color="rgb(45, 213, 255)" text="PROJECTS" x={140} />
+          <SvgButton color="rgb(45, 213, 255)" text="ABOUT" x={110} />
+          <SvgButton color="rgb(45, 213, 255)" text="CONTACT" x={120} />
+        </div>
       </header>
-      <nav>
-        <h1 className="text">navigation</h1>
-      </nav>
       <main>
         <h1 className="text">main section</h1>
         <h1 className="text">main section</h1>
@@ -17,7 +20,6 @@ function App() {
       <footer>
         <div className="footer">
           <h1 className="text">footer</h1>
-          <button>button</button>
         </div>
       </footer>
     </div>
