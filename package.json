@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "ajv": "^8.9.0"
+    "ajv": "^8.9.0",
+    "ajv-keywords": "^5.1.0"
   }
 }
