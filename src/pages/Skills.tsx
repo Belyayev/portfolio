@@ -5,9 +5,9 @@ function Skills() {
     <>
       <h2>My skills level at different technologies:</h2>
       <div className="skills">
-        <SVGDialCircle color="rgb(45, 213, 255)" text="HTML" />
-        <SVGDialCircle color="rgb(45, 213, 255)" text="CSS" />
-        <SVGDialCircle color="rgb(45, 213, 255)" text="JavaScript" />
+        <SVGDialCircle color="rgb(45, 213, 255)" text="HTML" value={90} />
+        <SVGDialCircle color="rgb(45, 213, 255)" text="CSS" value={95} />
+        <SVGDialCircle color="rgb(45, 213, 255)" text="JavaScript" value={70} />
         <SVGDialCircle color="rgb(45, 213, 255)" text="React" />
         <SVGDialCircle color="rgb(45, 213, 255)" text="C#" />
         <SVGDialCircle color="rgb(45, 213, 255)" text=".Net" />

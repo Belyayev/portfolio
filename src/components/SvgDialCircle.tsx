@@ -5,6 +5,7 @@ interface ISvg {
   y?: number;
   text?: string;
   color?: string;
+  value?: number;
 }
 
 function SVGDialCircle(props: ISvg) {
@@ -14,13 +15,17 @@ function SVGDialCircle(props: ISvg) {
   if (props.color) {
     color = props.color;
   }
+  let value = 0;
+  if (props.value) {
+    value = props.value;
+  }
 
   let cardStyle;
   if (hover) {
     cardStyle = {
       transition: "1s ease",
-      fill: "black",
-      fillOpacity: "0.1",
+      fill: color,
+      fillOpacity: "0.4",
       stroke: color,
     };
   } else {
@@ -74,10 +79,39 @@ function SVGDialCircle(props: ISvg) {
           y={y}
           fill={color}
           fontFamily="Share Tech Mono"
-          fontSize={10}
+          fontSize="10"
         >
           {text}
         </text>
+        <circle
+          cx="50"
+          cy="52"
+          r="30"
+          stroke="black"
+          fill="none"
+          strokeWidth="9"
+          strokeDasharray="2"
+        />
+        <text
+          x="50%"
+          y="58"
+          textAnchor="middle"
+          fill={color}
+          fontFamily="Share Tech Mono"
+          fontSize="20"
+        >
+          {value + "%"}
+        </text>
+        <g stroke={color}>
+          path
+          <path
+            d=" M 50 22 A 25 25 0 0 1 50 82"
+            stroke={color}
+            fill="none"
+            strokeWidth="9"
+            strokeDasharray="2"
+          />
+        </g>
       </svg>
     </div>
   );
