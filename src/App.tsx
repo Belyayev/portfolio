@@ -32,20 +32,16 @@ function App() {
           </div>
         </header>
         <main>
-          <div className="main">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/bio" element={<Bio />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/contacts" element={<Contacts />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/bio" element={<Bio />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contacts" element={<Contacts />} />
+          </Routes>
         </main>
         <footer>
-          <div className="footer">
-            <h1 className="text">footer</h1>
-          </div>
+          <h1 className="text">footer</h1>
         </footer>
       </BrowserRouter>
     </div>

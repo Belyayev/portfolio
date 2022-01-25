@@ -9,52 +9,82 @@ start by reseting all elements to have no margin or padding
 html,
 body {
   height: 100%;
-  width: 100%;
 }
 
 .App {
   height: 100vh;
   display: grid;
   gap: 0.3rem;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: min-content 1fr min-content;
-  grid-template-areas:
-    "h h h h h h h h h h h h"
-    "m m m m m m m m m m m m"
-    "f f f f f f f f f f f f";
-  justify-content: center;
+  grid:
+    "header" min-content
+    "main" auto
+    "footer" min-content;
+}
+
+@media screen and (min-width: 400px) {
+  .App {
+    grid:
+      "header header" min-content
+      "main main" auto
+      "footer footer" min-content;
+  }
+
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .skills {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .App {
+    grid:
+      "header header header" min-content
+      "main main main" auto
+      "footer footer footer" min-content / 1fr 2fr 1fr;
+  }
+  .header {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .skills {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 header {
-  grid-area: h;
-}
-
-.header {
-  display: flex;
+  grid-area: header;
   justify-content: center;
 }
 
+.header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-gap: 0.2rem;
+}
+
+.header * {
+  grid-column: span 1;
+}
+
 main {
-  grid-area: m;
-  justify-self: center;
+  grid-area: main;
+  justify-content: center;
 }
-.main {
-  color: rgb(45, 213, 255);
-  width: 60rem;
-  display: flex;
-  flex-direction: column;
-}
+
 .skills {
-  display: flex;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-gap: 0.2rem;
+}
+
+.skills * {
+  grid-column: span 1;
 }
 
 footer {
-  grid-area: f;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-around;
+  grid-area: footer;
+  color: rgb(45, 213, 255);
 }
 
 .text {
