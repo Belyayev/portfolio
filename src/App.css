@@ -21,7 +21,7 @@ body {
     "footer" min-content;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 300px) {
   .App {
     grid:
       "header header" min-content
@@ -37,7 +37,7 @@ body {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .App {
     grid:
       "header header header" min-content
