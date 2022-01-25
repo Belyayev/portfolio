@@ -89,7 +89,7 @@ function SvgButton(props: ISvg) {
         display="block"
         width={x}
         height={y}
-        viewBox="0 0 {{x}} {{y}}"
+        viewBox={"0 0 " + x + " " + y}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         cursor="pointer"
@@ -178,7 +178,7 @@ function SvgButton(props: ISvg) {
           cy={y / 2}
           r={x}
           stroke="white"
-          stroke-width="20%"
+          strokeWidth="20%"
           transform-origin="center center"
         />
       </svg>

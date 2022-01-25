@@ -45,6 +45,9 @@ function SVGDialCircle(props: ISvg) {
   if (props.text) x1 = props.text.length * 5 + 8;
   if (x1 > 80) x1 = 80;
 
+  let cirX = 50;
+  let cirY = 82;
+
   return (
     <div
       style={{
@@ -102,16 +105,13 @@ function SVGDialCircle(props: ISvg) {
         >
           {value + "%"}
         </text>
-        <g stroke={color}>
-          path
-          <path
-            d=" M 50 22 A 25 25 0 0 1 50 82"
-            stroke={color}
-            fill="none"
-            strokeWidth="9"
-            strokeDasharray="2"
-          />
-        </g>
+        <path
+          d={" M 50 22 A 25 25 0 0 1 " + cirX + " " + cirY}
+          stroke={color}
+          fill="none"
+          strokeWidth="9"
+          strokeDasharray="2"
+        />
       </svg>
     </div>
   );
