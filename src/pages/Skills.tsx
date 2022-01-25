@@ -12,7 +12,7 @@ function Skills() {
         <SVGDialCircle color="rgb(45, 213, 255)" text="C#" />
         <SVGDialCircle color="rgb(45, 213, 255)" text=".Net" />
         <SVGDialCircle color="rgb(45, 213, 255)" text="SQL" />
-        <SVGDialCircle color="rgb(45, 213, 255)" text="Entity FW" />
+        <SVGDialCircle color="rgb(45, 213, 255)" text="Entity Frmwrk" />
         <SVGDialCircle color="rgb(45, 213, 255)" text="Azure" />
         <SVGDialCircle color="rgb(45, 213, 255)" text="Python" />
         <SVGDialCircle color="rgb(45, 213, 255)" text="Angular" />

@@ -36,6 +36,10 @@ function SVGDialCircle(props: ISvg) {
   if (props.y) y = props.y;
   let text = props.text;
 
+  let x1 = 10;
+  if (props.text) x1 = props.text.length * 5 + 10;
+  if (x1 > 80) x1 = 80;
+
   return (
     <div
       style={{
@@ -48,14 +52,20 @@ function SVGDialCircle(props: ISvg) {
         <g stroke="none" fill={color}>
           <polygon
             style={cardStyle}
-            points="1,0 32,0 40,5 88,5 91,1 97,1 97,88 84,102 62,102 60,94 1,94 1,81 3,76 3,41 1,37 "
+            points={
+              "1,0 32,0 40,5 88,5 91,1 97,1 97,88 83,102 " +
+              x1 +
+              ",102 " +
+              x1 +
+              ",94 1,94 1,81 3,76 3,41 1,37 "
+            }
           />
           <polygon points="98,90 98,101 87,101 " />
-          <polygon points="0,38 2,41 2,76 0,79 " />
+          <polygon points="0,37 2,41 2,76 0,80 " />
           <polygon points="40,4 46,4 46,1 36,1 " />
           <polygon points="48,4 57,4 57,1 48,1 " />
           <polygon points="59,4 65,4 65,1 59,1 " />
-          <polygon points="67,4 69,4 69,1 67,1 " />
+          <polygon points="67,4 70,4 70,1 67,1 " />
           <polygon points="72,4 82,4 82,1 72,1 " />
           <polygon points="87,4 84,4 84,1 89,1 " />
         </g>
