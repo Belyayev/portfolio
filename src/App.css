@@ -30,10 +30,6 @@ body {
       "main main" auto
       "footer footer" min-content;
   }
-
-  .header {
-    grid-template-columns: 1fr 1fr;
-  }
   .skills {
     grid-template-columns: 1fr 1fr;
   }
@@ -47,7 +43,7 @@ body {
       "footer footer footer" min-content / 1fr 1fr 1fr;
   }
   .header {
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
   }
   .skills {
     grid-template-columns: 1fr 1fr 1fr;
@@ -56,12 +52,15 @@ body {
 @media screen and (min-width: 800px) {
   .App {
     grid:
-      ". . . header header . . ." min-content
+      ". . header header header header . ." min-content
       ". . main main main main . ." auto
       ". . footer footer footer footer . ." min-content;
   }
+  main {
+    width: 50rem;
+  }
   .header {
-    grid-template-columns: repeat(8, 1fr);
+    flex-direction: row !important;
   }
   .skills {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -70,22 +69,18 @@ body {
 
 header {
   grid-area: header;
-  justify-content: center;
 }
 
 .header {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-gap: 0.2rem;
-}
-
-.header * {
-  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   grid-area: main;
-  justify-content: center;
+  justify-self: center;
 }
 
 .skills {
