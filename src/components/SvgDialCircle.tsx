@@ -45,8 +45,8 @@ function SVGDialCircle(props: ISvg) {
   if (props.text) x1 = props.text.length * 5 + 8;
   if (x1 > 80) x1 = 80;
 
-  let cirX = 50;
-  let cirY = 82;
+  // let cirX = 77 + Math.cos(1.5) * 30;
+  // let cirY = 82 + Math.sin(1.5) * 30;
 
   return (
     <div
@@ -57,6 +57,9 @@ function SVGDialCircle(props: ISvg) {
       onMouseLeave={() => setHover(false)}
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 110" width="100%">
+        <mask id="myMask">
+          <rect x="0" y="0" width="50" height="50" fill="white" />
+        </mask>
         <g stroke="none" fill={color}>
           <polygon
             style={cardStyle}
@@ -105,12 +108,22 @@ function SVGDialCircle(props: ISvg) {
         >
           {value + "%"}
         </text>
-        <path
+        {/* <path
           d={" M 50 22 A 25 25 0 0 1 " + cirX + " " + cirY}
           stroke={color}
           fill="none"
           strokeWidth="9"
           strokeDasharray="2"
+        /> */}
+        <circle
+          cx="50"
+          cy="52"
+          r="30"
+          stroke={color}
+          fill="none"
+          strokeWidth="9"
+          strokeDasharray="2"
+          mask="url(#myMask)"
         />
       </svg>
     </div>
