@@ -9,10 +9,12 @@ start by reseting all elements to have no margin or padding
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 .App {
   height: 100vh;
+  width: 100vw;
   display: grid;
   gap: 0.3rem;
   grid:
@@ -21,7 +23,7 @@ body {
     "footer" min-content;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 400px) {
   .App {
     grid:
       "header header" min-content
@@ -42,13 +44,27 @@ body {
     grid:
       "header header header" min-content
       "main main main" auto
-      "footer footer footer" min-content / 1fr 2fr 1fr;
+      "footer footer footer" min-content / 1fr 1fr 1fr;
   }
   .header {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .skills {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 800px) {
+  .App {
+    grid:
+      ". . . header header . . ." min-content
+      ". . main main main main . ." auto
+      ". . footer footer footer footer . ." min-content;
+  }
+  .header {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .skills {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -58,8 +74,8 @@ header {
 }
 
 .header {
-  grid-column: 1 / -1;
   display: grid;
+  grid-column: 1 / -1;
   grid-gap: 0.2rem;
 }
 
@@ -73,8 +89,8 @@ main {
 }
 
 .skills {
-  grid-column: 1 / -1;
   display: grid;
+  grid-column: 1 / -1;
   grid-gap: 0.2rem;
 }
 
