@@ -37,7 +37,7 @@ function SVGDialCircle(props: ISvg) {
   let text = props.text;
 
   let x1 = 10;
-  if (props.text) x1 = props.text.length * 5 + 10;
+  if (props.text) x1 = props.text.length * 5 + 8;
   if (x1 > 80) x1 = 80;
 
   return (
