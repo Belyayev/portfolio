@@ -23,51 +23,6 @@ body {
     "footer" min-content;
 }
 
-@media screen and (min-width: 400px) {
-  .App {
-    grid:
-      "header header" min-content
-      "main main" auto
-      "footer footer" min-content;
-  }
-  .skills {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .App {
-    grid:
-      "header header header" min-content
-      "main main main" auto
-      "footer footer footer" min-content / 1fr 1fr 1fr;
-  }
-
-  .skills {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media screen and (min-width: 800px) {
-  .App {
-    grid:
-      ". . header header header header . ." min-content
-      ". . main main main main . ." auto
-      ". . footer footer footer footer . ." min-content;
-  }
-  main {
-    width: 50rem;
-  }
-  .large-menu {
-    display: block !important;
-  }
-  .small-menu {
-    display: none !important;
-  }
-  .skills {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
 header {
   grid-area: header;
 }
@@ -82,9 +37,8 @@ header {
   display: none;
 }
 .small-menu {
-  display: inline-block;
-  width: 5rem;
-  margin: 1rem;
+  width: 3rem;
+  margin: 0.5rem;
 }
 
 main {
@@ -110,4 +64,52 @@ footer {
 .text {
   margin: 0.3rem;
   padding: 0 1rem;
+}
+
+@media screen and (min-width: 400px) {
+  .App {
+    grid:
+      "header header" min-content
+      "main main" auto
+      "footer footer" min-content;
+  }
+  .skills {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .App {
+    grid:
+      "header header header" min-content
+      "main main main" auto
+      "footer footer footer" min-content / 1fr 1fr 1fr;
+  }
+  .skills {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .small-menu {
+    width: 5rem;
+    margin: 1rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .App {
+    grid:
+      ". . header header header header . ." min-content
+      ". . main main main main . ." auto
+      ". . footer footer footer footer . ." min-content;
+  }
+  main {
+    width: 50rem;
+  }
+  .large-menu {
+    display: block !important;
+  }
+  .small-menu {
+    display: none;
+  }
+  .skills {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
