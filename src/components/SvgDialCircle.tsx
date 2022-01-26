@@ -20,19 +20,15 @@ function SVGDialCircle(props: ISvg) {
     value = props.value;
   }
 
-  let cardStyle;
+  let txtStyle;
   if (hover) {
-    cardStyle = {
+    txtStyle = {
       transition: "1s ease",
-      fill: color,
-      fillOpacity: "0.4",
-      stroke: color,
+      stroke: "lime",
     };
   } else {
-    cardStyle = {
+    txtStyle = {
       transition: "1s ease",
-      fill: color,
-      fillOpacity: "0.2",
       stroke: color,
     };
   }
@@ -41,9 +37,9 @@ function SVGDialCircle(props: ISvg) {
   if (props.y) y = props.y;
   let text = props.text;
 
-  let x1 = 10;
-  if (props.text) x1 = props.text.length * 5 + 8;
-  if (x1 > 80) x1 = 80;
+  let txtWidth = 10;
+  if (props.text) txtWidth = props.text.length * 5 + 8;
+  if (txtWidth > 80) txtWidth = 80;
 
   const dashArray = 30 * Math.PI * 2;
   const dashOffset = dashArray - (dashArray * value) / 100;
@@ -62,12 +58,14 @@ function SVGDialCircle(props: ISvg) {
         </mask>
         <g stroke="none" fill={color}>
           <polygon
-            style={cardStyle}
+            fill={color}
+            stroke={color}
+            fillOpacity="0.1"
             points={
               "1,0 32,0 40,5 88,5 91,1 97,1 97,88 83,102 " +
-              x1 +
+              txtWidth +
               ",102 " +
-              x1 +
+              txtWidth +
               ",94 1,94 1,81 3,76 3,41 1,37 "
             }
           />
@@ -93,8 +91,8 @@ function SVGDialCircle(props: ISvg) {
           cx="50"
           cy="52"
           r="30"
-          stroke="black"
-          opacity="0.6"
+          stroke={color}
+          opacity="0.1"
           fill="none"
           strokeWidth="9"
           strokeDasharray="2"
@@ -103,7 +101,7 @@ function SVGDialCircle(props: ISvg) {
           cx="50"
           cy="52"
           r="30"
-          stroke="lime"
+          style={txtStyle}
           fill="none"
           strokeWidth="9"
           strokeDasharray="2"
@@ -126,7 +124,7 @@ function SVGDialCircle(props: ISvg) {
           x="50%"
           y="58"
           textAnchor="middle"
-          fill="lime"
+          fill={color}
           fontFamily="Share Tech Mono"
           fontSize="20"
         >
