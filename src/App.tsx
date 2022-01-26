@@ -18,35 +18,35 @@ function App() {
           <div className="header">
             <NavLink to="/" onClick={() => setPath("/")}>
               <SvgButton
-                color={path === "/" ? "red" : "rgb(45, 213, 255)"}
+                color={path === "/" ? "lime" : "rgb(45, 213, 255)"}
                 text="HOME"
                 x={100}
               />
             </NavLink>
             <NavLink to="/projects" onClick={() => setPath("/projects")}>
               <SvgButton
-                color={path === "/projects" ? "red" : "rgb(45, 213, 255)"}
+                color={path === "/projects" ? "lime" : "rgb(45, 213, 255)"}
                 text="PROJECTS"
                 x={140}
               />
             </NavLink>
             <NavLink to="/bio" onClick={() => setPath("/bio")}>
               <SvgButton
-                color={path === "/bio" ? "red" : "rgb(45, 213, 255)"}
+                color={path === "/bio" ? "lime" : "rgb(45, 213, 255)"}
                 text="BIO"
                 x={80}
               />
             </NavLink>
             <NavLink to="/skills" onClick={() => setPath("/skills")}>
               <SvgButton
-                color={path === "/skills" ? "red" : "rgb(45, 213, 255)"}
+                color={path === "/skills" ? "lime" : "rgb(45, 213, 255)"}
                 text="SKILLS"
                 x={110}
               />
             </NavLink>
             <NavLink to="/contacts" onClick={() => setPath("/contacts")}>
               <SvgButton
-                color={path === "/contacts" ? "red" : "rgb(45, 213, 255)"}
+                color={path === "/contacts" ? "lime" : "rgb(45, 213, 255)"}
                 text="CONTACTS"
                 x={120}
               />

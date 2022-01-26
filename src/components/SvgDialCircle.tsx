@@ -103,7 +103,7 @@ function SVGDialCircle(props: ISvg) {
           cx="50"
           cy="52"
           r="30"
-          stroke={color}
+          stroke="lime"
           fill="none"
           strokeWidth="9"
           strokeDasharray="2"
@@ -126,7 +126,7 @@ function SVGDialCircle(props: ISvg) {
           x="50%"
           y="58"
           textAnchor="middle"
-          fill={color}
+          fill="lime"
           fontFamily="Share Tech Mono"
           fontSize="20"
         >
