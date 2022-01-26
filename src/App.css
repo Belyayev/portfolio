@@ -61,7 +61,7 @@ footer {
   padding: 1rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 300px) {
   .App {
     grid:
       "header header" min-content
@@ -71,13 +71,9 @@ footer {
   .skills {
     grid-template-columns: 1fr 1fr;
   }
-  .small-menu {
-    width: 4rem;
-    margin: 0.5rem;
-  }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .App {
     grid:
       "header header header" min-content
@@ -92,7 +88,7 @@ footer {
     margin: 1rem;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .App {
     grid:
       ". . header header header header . ." min-content
