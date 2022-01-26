@@ -24,6 +24,7 @@ function App() {
             <NavLink to="/" onClick={() => setPath("/")}>
               <div className="large-menu">
                 <SvgButton
+                  active={path === "/"}
                   color={path === "/" ? "lime" : "rgb(45, 213, 255)"}
                   text="HOME"
                   x={100}
@@ -36,6 +37,7 @@ function App() {
             <NavLink to="/projects" onClick={() => setPath("/projects")}>
               <div className="large-menu">
                 <SvgButton
+                  active={path === "/projects"}
                   color={path === "/projects" ? "lime" : "rgb(45, 213, 255)"}
                   text="PROJECTS"
                   x={140}
@@ -48,6 +50,7 @@ function App() {
             <NavLink to="/bio" onClick={() => setPath("/bio")}>
               <div className="large-menu">
                 <SvgButton
+                  active={path === "/bio"}
                   color={path === "/bio" ? "lime" : "rgb(45, 213, 255)"}
                   text="BIO"
                   x={80}
@@ -60,6 +63,7 @@ function App() {
             <NavLink to="/skills" onClick={() => setPath("/skills")}>
               <div className="large-menu">
                 <SvgButton
+                  active={path === "/skills"}
                   color={path === "/skills" ? "lime" : "rgb(45, 213, 255)"}
                   text="SKILLS"
                   x={110}
@@ -72,6 +76,7 @@ function App() {
             <NavLink to="/contacts" onClick={() => setPath("/contacts")}>
               <div className="large-menu">
                 <SvgButton
+                  active={path === "/contacts"}
                   color={path === "/contacts" ? "lime" : "rgb(45, 213, 255)"}
                   text="CONTACTS"
                   x={120}

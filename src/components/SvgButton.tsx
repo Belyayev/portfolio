@@ -16,9 +16,18 @@ interface ISvg {
   y?: number;
   text?: string;
   color?: string;
+  active?: boolean;
 }
 
 function SvgButton(props: ISvg) {
+  const [hover, setHover] = useState(false);
+  const [click, setClick] = useState(false);
+
+  let active = false;
+  if (props.active) {
+    active = props.active;
+  }
+
   let color = "lime";
   if (props.color) {
     color = props.color;
@@ -29,9 +38,6 @@ function SvgButton(props: ISvg) {
   let y = 40;
   if (props.y) y = props.y;
   let text = props.text;
-
-  const [hover, setHover] = useState(false);
-  const [click, setClick] = useState(false);
 
   let circleStyle;
   if (click) {
@@ -46,7 +52,7 @@ function SvgButton(props: ISvg) {
   }
 
   let rectStyle;
-  if (hover) {
+  if (hover || active) {
     rectStyle = {
       transition: "1s ease",
       fill: color,
@@ -61,14 +67,14 @@ function SvgButton(props: ISvg) {
   }
 
   let strokeStyle;
-  if (hover) {
+  if (hover || active) {
     strokeStyle = { transition: "1s ease", transform: "scale(1)" };
   } else {
     strokeStyle = { transition: "1s ease", transform: "scale(0)" };
   }
 
   let anglesStyle;
-  if (hover) {
+  if (hover || active) {
     anglesStyle = { transition: "0.5s ease", transform: "scale(0.9)" };
   } else {
     anglesStyle = {

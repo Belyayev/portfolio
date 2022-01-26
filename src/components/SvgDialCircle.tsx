@@ -21,16 +21,19 @@ function SVGDialCircle(props: ISvg) {
   }
 
   let txtStyle;
+  let txtColor;
   if (hover) {
     txtStyle = {
       transition: "1s ease",
       stroke: "lime",
     };
+    txtColor = "lime";
   } else {
     txtStyle = {
       transition: "1s ease",
       stroke: color,
     };
+    txtColor = color;
   }
 
   let y = 105;
@@ -38,7 +41,7 @@ function SVGDialCircle(props: ISvg) {
   let text = props.text;
 
   let txtWidth = 10;
-  if (props.text) txtWidth = props.text.length * 5 + 8;
+  if (props.text) txtWidth = props.text.length * 5.5 + 5;
   if (txtWidth > 80) txtWidth = 80;
 
   const dashArray = 30 * Math.PI * 2;
@@ -81,7 +84,7 @@ function SVGDialCircle(props: ISvg) {
         <text
           x="0"
           y={y}
-          fill={color}
+          fill={txtColor}
           fontFamily="Share Tech Mono"
           fontSize="10"
         >
