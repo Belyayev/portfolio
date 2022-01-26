@@ -93,7 +93,7 @@ function App() {
           </Routes>
         </main>
         <footer>
-          <h1 className="text">footer</h1>
+          <p>Mike Belyayev (c) 2022</p>
         </footer>
       </BrowserRouter>
     </div>

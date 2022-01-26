@@ -58,12 +58,7 @@ main {
 
 footer {
   grid-area: footer;
-  color: rgb(45, 213, 255);
-}
-
-.text {
-  margin: 0.3rem;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 400px) {
@@ -75,6 +70,10 @@ footer {
   }
   .skills {
     grid-template-columns: 1fr 1fr;
+  }
+  .small-menu {
+    width: 4rem;
+    margin: 0.5rem;
   }
 }
 
