@@ -1,5 +1,5 @@
 {
-  "name": "Mike Belyayev - portfolip",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,9 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "ajv": "^8.9.0",
-    "ajv-keywords": "^5.1.0"
   }
 }
