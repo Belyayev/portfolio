@@ -42,9 +42,7 @@ body {
       "main main main" auto
       "footer footer footer" min-content / 1fr 1fr 1fr;
   }
-  .header {
-    flex-direction: column;
-  }
+
   .skills {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -59,8 +57,11 @@ body {
   main {
     width: 50rem;
   }
-  .header {
-    flex-direction: row !important;
+  .large-menu {
+    display: block !important;
+  }
+  .small-menu {
+    display: none !important;
   }
   .skills {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -73,9 +74,17 @@ header {
 
 .header {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.large-menu {
+  display: none;
+}
+.small-menu {
+  display: inline-block;
+  width: 5rem;
+  margin: 1rem;
 }
 
 main {
