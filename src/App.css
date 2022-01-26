@@ -46,6 +46,28 @@ main {
   justify-self: center;
 }
 
+.home {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.jumbo-font {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.foto-frame {
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid #2dd5ff;
+  background-color: #2dd5ff;
+  opacity: 0.5;
+}
+
 .skills {
   display: grid;
   grid-column: 1 / -1;
@@ -70,6 +92,15 @@ footer {
   }
   .skills {
     grid-template-columns: 1fr 1fr;
+  }
+  .jumbo-font {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .foto-frame {
+    width: 20rem;
+    margin-top: 2rem;
+    height: 25rem;
   }
 }
 
@@ -107,10 +138,46 @@ footer {
   .skills {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .home {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    margin-top: 3rem;
+  }
+  .jumbo-font {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  .foto-frame {
+    width: 18rem;
+    height: 22rem;
+    border: 1px solid #2dd5ff;
+    margin-left: 0.5rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   main {
     width: 60rem;
+  }
+  .home {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    margin-top: 3rem;
+  }
+  .jumbo-font {
+    font-size: 3.5rem;
+    line-height: 6rem;
+  }
+  .foto-frame {
+    width: 20rem;
+    height: 25rem;
+    border: 1px solid #2dd5ff;
+    margin-left: 2rem;
   }
 }

@@ -1,7 +1,12 @@
 function Home() {
   return (
-    <div>
-      <h1>Home page</h1>
+    <div className="home">
+      <div>
+        <h1 className="jumbo-font">Mike Belyayev</h1>
+        <h1 className="jumbo-font">Software Developer</h1>
+        <h1 className="jumbo-font">& UI/UX Designer</h1>
+      </div>
+      <div className="foto-frame"></div>
     </div>
   );
 }

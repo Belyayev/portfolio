@@ -15,7 +15,7 @@ body {
     ),
     url("img/background01.jpg");
   background-size: cover;
-  color: rgb(45, 213, 255);
+  color: #2dd5ff;
   text-align: center;
 }
 
