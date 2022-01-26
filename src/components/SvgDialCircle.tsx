@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ISvg {
   x?: number;
@@ -10,14 +10,28 @@ interface ISvg {
 
 function SVGDialCircle(props: ISvg) {
   const [hover, setHover] = useState(false);
+  const [value, setValue] = useState(0);
+
+  let percentage = 0;
+  if (props.value) {
+    percentage = props.value;
+  }
+
+  let counter = 0;
+
+  useEffect(() => {
+    let timer = setInterval(function () {
+      counter += 2;
+      setValue(counter);
+      if (counter >= percentage) {
+        clearInterval(timer);
+      }
+    }, 5);
+  }, []);
 
   let color = "lime";
   if (props.color) {
     color = props.color;
-  }
-  let value = 0;
-  if (props.value) {
-    value = props.value;
   }
 
   let txtStyle;
@@ -51,6 +65,7 @@ function SVGDialCircle(props: ISvg) {
     <div
       style={{
         margin: "1rem",
+        transition: "all 1s",
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
@@ -108,9 +123,9 @@ function SVGDialCircle(props: ISvg) {
           fill="none"
           strokeWidth="9"
           strokeDasharray="2"
-          mask={"url(#" + value + ")"}
+          mask={"url(#" + text + value + ")"}
         />
-        <mask id={value.toString()}>
+        <mask id={text + value.toString()}>
           <circle
             cx="50"
             cy="52"
