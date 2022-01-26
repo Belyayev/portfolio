@@ -45,8 +45,75 @@ function SVGDialCircle(props: ISvg) {
   if (props.text) x1 = props.text.length * 5 + 8;
   if (x1 > 80) x1 = 80;
 
-  // let cirX = 77 + Math.cos(1.5) * 30;
-  // let cirY = 82 + Math.sin(1.5) * 30;
+  // let cirX = 50 + Math.cos((90 * Math.PI) / 180) * 31;
+  // let cirY = 20 + Math.sin((90 * Math.PI) / 180) * 31;
+
+  const cos = Math.cos;
+  const sin = Math.sin;
+  const π = Math.PI;
+
+  const f_matrix_times = ([[a, b], [c, d]]: number[][], [x, y]: number[]) => [
+    a * x + b * y,
+    c * x + d * y,
+  ];
+  const f_rotate_matrix = (x: number) => [
+    [cos(x), -sin(x)],
+    [sin(x), cos(x)],
+  ];
+  const f_vec_add = ([a1, a2]: number[], [b1, b2]: number[]) => [
+    a1 + b1,
+    a2 + b2,
+  ];
+
+  const f_svg_ellipse_arc = (
+    [cx, cy]: number[],
+    [rx, ry]: number[],
+    [t1, Δ]: number[],
+    φ: number
+  ) => {
+    /* [
+returns a SVG path element that represent a ellipse.
+cx,cy → center of ellipse
+rx,ry → major minor radius
+t1 → start angle, in radian.
+Δ → angle to sweep, in radian. positive.
+φ → rotation on the whole, in radian
+URL: SVG Circle Arc http://xahlee.info/js/svg_circle_arc.html
+Version 2019-06-19
+ ] */
+    Δ = Δ % (2 * π);
+    const rotMatrix = f_rotate_matrix(φ);
+    const [sX, sY] = f_vec_add(
+      f_matrix_times(rotMatrix, [rx * cos(t1), ry * sin(t1)]),
+      [cx, cy]
+    );
+    const [eX, eY] = f_vec_add(
+      f_matrix_times(rotMatrix, [rx * cos(t1 + Δ), ry * sin(t1 + Δ)]),
+      [cx, cy]
+    );
+    const fA = Δ > π ? 1 : 0;
+    const fS = Δ > 0 ? 1 : 0;
+    const path_2wk2r = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "path"
+    );
+    path_2wk2r.setAttribute(
+      "d",
+      "M " +
+        sX +
+        " " +
+        sY +
+        " A " +
+        [rx, ry, (φ / (2 * π)) * 360, fA, fS, eX, eY].join(" ")
+    );
+    return path_2wk2r;
+  };
+
+  let path = f_svg_ellipse_arc([50, 50], [31, 31], [3, 4.7], 0);
+  console.log(path);
+
+  const dashArray = 30 * Math.PI * 2;
+  const dashOffset = dashArray - (dashArray * value) / 100;
 
   return (
     <div
@@ -98,6 +165,18 @@ function SVGDialCircle(props: ISvg) {
           strokeWidth="9"
           strokeDasharray="2"
         />
+        <circle
+          cx="50"
+          cy="52"
+          r="30"
+          transform="rotate(-90 50 52)"
+          stroke={color}
+          opacity={0.5}
+          fill="none"
+          strokeWidth="15"
+          strokeDasharray={dashArray}
+          strokeDashoffset={dashOffset}
+        />
         <text
           x="50%"
           y="58"
@@ -108,6 +187,9 @@ function SVGDialCircle(props: ISvg) {
         >
           {value + "%"}
         </text>
+        <g stroke={color} fill="none" strokeWidth="15" opacity="0.5">
+          {/* <path d="M 19.310232605386194 54.37472024985588 A 31 31 0 1 1 54.754589723173794 80.633215250187"></path> */}
+        </g>
         {/* <path
           d={" M 50 22 A 25 25 0 0 1 " + cirX + " " + cirY}
           stroke={color}
@@ -115,16 +197,13 @@ function SVGDialCircle(props: ISvg) {
           strokeWidth="9"
           strokeDasharray="2"
         /> */}
-        <circle
-          cx="50"
-          cy="52"
-          r="30"
-          stroke={color}
+        {/* <path
+          d={"M 50 21 A 31 31 0 0 1" + cirX + " " + cirY}
           fill="none"
-          strokeWidth="9"
-          strokeDasharray="2"
-          mask="url(#myMask)"
-        />
+          opacity={0.5}
+          stroke={color}
+          strokeWidth="15"
+        /> */}
       </svg>
     </div>
   );
