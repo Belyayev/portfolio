@@ -29,7 +29,7 @@ function SVGDialCircle(props: ISvg) {
     return () => {
       clearTimeout(timer);
     };
-  }, [delay]);
+  }, []);
 
   useEffect(() => {
     let counter = 0;
