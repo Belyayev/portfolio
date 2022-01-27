@@ -6,16 +6,30 @@ interface ISvg {
   text?: string;
   color?: string;
   value?: number;
+  delay?: number;
 }
 
 function SVGDialCircle(props: ISvg) {
   const [hover, setHover] = useState(false);
   const [value, setValue] = useState(0);
+  const [show, setShow] = useState(false);
 
   let percentage = 0;
   if (props.value) {
     percentage = props.value;
   }
+
+  let delay = 0;
+  if (props.delay) {
+    delay = props.delay;
+  }
+
+  useEffect(() => {
+    let timer = setTimeout(() => setShow(true), delay);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [delay]);
 
   useEffect(() => {
     let counter = 0;
@@ -25,8 +39,11 @@ function SVGDialCircle(props: ISvg) {
       if (counter >= percentage) {
         clearInterval(timer);
       }
-    }, 40);
-  }, [percentage]);
+    }, 15);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [percentage, show]);
 
   let color = "lime";
   if (props.color) {
@@ -60,8 +77,9 @@ function SVGDialCircle(props: ISvg) {
   const dashArray = 30 * Math.PI * 2;
   const dashOffset = dashArray - (dashArray * value) / 100;
 
-  return (
+  return show ? (
     <div
+      className="skill-card"
       style={{
         margin: "1rem",
         transition: "all 1s",
@@ -149,7 +167,7 @@ function SVGDialCircle(props: ISvg) {
         </text>
       </svg>
     </div>
-  );
+  ) : null;
 }
 
 SVGDialCircle.defaultProps = {
