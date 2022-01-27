@@ -25,7 +25,7 @@ function SVGDialCircle(props: ISvg) {
       if (counter >= percentage) {
         clearInterval(timer);
       }
-    }, 10);
+    }, 40);
   }, [percentage]);
 
   let color = "lime";
