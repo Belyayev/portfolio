@@ -59,6 +59,7 @@ main {
   font-size: 1.8rem;
   line-height: 2.5rem;
   padding: 0.5rem;
+  animation: slide-right 1.2s forwards;
 }
 
 .foto-frame {
@@ -66,7 +67,7 @@ main {
   height: 20rem;
   border: 1px solid #2dd5ff;
   background-color: #2dd5ff;
-  opacity: 0.5;
+  animation: slide-up 1.2s forwards;
 }
 
 .skills {
@@ -196,5 +197,27 @@ footer {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  to {
+    opacity: 0.5;
+    transform: translateX(0);
   }
 }
