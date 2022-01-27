@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import SVGDialCircle from "../components/SvgDialCircle";
 
 function Skills() {

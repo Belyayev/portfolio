@@ -17,9 +17,8 @@ function SVGDialCircle(props: ISvg) {
     percentage = props.value;
   }
 
-  let counter = 0;
-
   useEffect(() => {
+    let counter = 0;
     let timer = setInterval(function () {
       counter += 1;
       setValue(counter);
@@ -27,7 +26,7 @@ function SVGDialCircle(props: ISvg) {
         clearInterval(timer);
       }
     }, 10);
-  }, []);
+  }, [percentage]);
 
   let color = "lime";
   if (props.color) {
