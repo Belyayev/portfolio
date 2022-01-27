@@ -5,7 +5,7 @@ function Skills() {
     <>
       <h2>My skills level at different technologies:</h2>
       <div className="skills">
-        <SVGDialCircle color="#2dd5ff" text="HTML" value={94} />
+        <SVGDialCircle color="#2dd5ff" text="HTML" value={94} delay={10} />
         <SVGDialCircle color="#2dd5ff" text="CSS" value={92} delay={100} />
         <SVGDialCircle
           color="#2dd5ff"
