@@ -21,12 +21,12 @@ function SVGDialCircle(props: ISvg) {
 
   useEffect(() => {
     let timer = setInterval(function () {
-      counter += 2;
+      counter += 1;
       setValue(counter);
       if (counter >= percentage) {
         clearInterval(timer);
       }
-    }, 5);
+    }, 10);
   }, []);
 
   let color = "lime";
