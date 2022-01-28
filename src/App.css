@@ -68,7 +68,7 @@ main {
   height: 20rem;
   border: 1px solid #2dd5ff;
   background-color: #2dd5ff;
-  animation: slide-up 1.2s forwards;
+  animation: slide_up 1.2s forwards;
 }
 
 .skills {
@@ -89,7 +89,7 @@ main {
 .contact-card {
   padding: 1rem;
   opacity: 0;
-  animation: slide-right 0.5s forwards;
+  animation: slide-up 0.5s forwards;
 }
 
 footer {
@@ -219,6 +219,17 @@ footer {
 }
 
 @keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide_up {
   from {
     opacity: 0;
     transform: translateY(5rem);
