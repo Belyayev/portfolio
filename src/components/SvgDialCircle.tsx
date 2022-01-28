@@ -10,9 +10,9 @@ interface ISvg {
 }
 
 function SVGDialCircle(props: ISvg) {
+  const [show, setShow] = useState(false);
   const [hover, setHover] = useState(false);
   const [value, setValue] = useState(0);
-  const [show, setShow] = useState(false);
 
   let percentage = 0;
   if (props.value) {

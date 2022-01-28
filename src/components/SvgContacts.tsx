@@ -11,12 +11,18 @@ interface ISvg {
 }
 
 function SVGContacts(props: ISvg) {
+  const [show, setShow] = useState(false);
   const [hover, setHover] = useState(false);
   const [rotation, setRotation] = useState(0);
 
   let color = "lime";
   if (props.color) {
     color = props.color;
+  }
+
+  let delay = 0;
+  if (props.delay) {
+    delay = props.delay;
   }
 
   let txtColor;
@@ -32,6 +38,13 @@ function SVGContacts(props: ISvg) {
   }
 
   useEffect(() => {
+    let timer = setTimeout(() => setShow(true), delay);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [delay]);
+
+  useEffect(() => {
     let timer = setInterval(function () {
       if (hover) {
         setRotation(rotation + 1);
@@ -42,8 +55,9 @@ function SVGContacts(props: ISvg) {
     };
   }, [rotation, hover]);
 
-  return (
+  return show ? (
     <div
+      className="contact-card"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -260,7 +274,7 @@ function SVGContacts(props: ISvg) {
         </g>
       </svg>
     </div>
-  );
+  ) : null;
 }
 
 SVGContacts.defaultProps = {

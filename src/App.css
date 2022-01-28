@@ -89,7 +89,7 @@ main {
 .contact-card {
   padding: 1rem;
   opacity: 0;
-  animation: slide-up 0.5s forwards;
+  animation: slide-up 1s forwards;
 }
 
 footer {
