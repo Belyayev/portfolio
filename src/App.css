@@ -90,6 +90,7 @@ main {
   padding: 1rem;
   opacity: 0;
   animation: slide-up 1s forwards;
+  -webkit-animation: slide-up 1s forwards;
 }
 
 footer {
