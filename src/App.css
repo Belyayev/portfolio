@@ -229,6 +229,17 @@ footer {
   }
 }
 
+@-webkit-keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes slide_up {
   from {
     opacity: 0;
