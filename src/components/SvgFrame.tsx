@@ -14,6 +14,9 @@ function SVGFrame(props: ISvg) {
   const [hover, setHover] = useState(false);
   const [angle, setAngle] = useState(0);
 
+  if (hover) {
+  }
+
   let color = "lime";
   if (props.color) {
     color = props.color;
@@ -22,7 +25,7 @@ function SVGFrame(props: ISvg) {
   useEffect(() => {
     let timer = setInterval(function () {
       setAngle(angle + 1);
-    }, 50);
+    }, 40);
     return () => {
       clearInterval(timer);
     };
