@@ -1,3 +1,5 @@
+import SVGFrame from "../components/SvgFrame";
+
 function Home() {
   return (
     <div className="home">
@@ -6,7 +8,7 @@ function Home() {
         <h1 className="jumbo-font">Software Developer</h1>
         <h1 className="jumbo-font">& UI/UX Designer</h1>
       </div>
-      <div className="foto-frame"></div>
+      <SVGFrame color="#2dd5ff" />
     </div>
   );
 }
