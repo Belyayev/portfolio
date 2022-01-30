@@ -25,17 +25,64 @@ function SVGFrame(props: ISvg) {
   useEffect(() => {
     let timer = setInterval(function () {
       setAngle(angle + 1);
+      // draw();
     }, 40);
     return () => {
       clearInterval(timer);
     };
-  }, [angle]);
+  }, [angle, draw]);
+
+  // Initialising the canvas
+  let canvas = document.createElement("canvas");
+  // var canvas = document.querySelector("canvas"),
+  let ctx = canvas.getContext("2d");
+
+  // Setting the width and height of the canvas
+  canvas.width = 500;
+  canvas.height = 500;
+
+  // Setting up the letters
+  let letters =
+    "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
+  letters.split("");
+
+  // Setting up the columns
+  var fontSize = 10,
+    columns = canvas.width / fontSize;
+
+  // Setting up the drops
+  var drops: number[] = [];
+  for (var i = 0; i < columns; i++) {
+    drops[i] = 1;
+  }
+
+  // Setting up the draw function
+
+  function draw() {
+    if (ctx != null) {
+      ctx.fillStyle = "rgba(0, 0, 0, .1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      for (var i = 0; i < drops.length; i++) {
+        var text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillStyle = "#0f0";
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        drops[i]++;
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+          drops[i] = 0;
+        }
+      }
+    }
+  }
+
+  // Loop the animation
+  // setInterval(draw, 50);
 
   return (
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
+      {/* <canvas>ok</canvas> */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
