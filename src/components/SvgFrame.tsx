@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface ISvg {
   x?: number;
@@ -25,64 +24,18 @@ function SVGFrame(props: ISvg) {
   useEffect(() => {
     let timer = setInterval(function () {
       setAngle(angle + 1);
-      // draw();
     }, 40);
     return () => {
       clearInterval(timer);
     };
-  }, [angle, draw]);
-
-  // Initialising the canvas
-  let canvas = document.createElement("canvas");
-  // var canvas = document.querySelector("canvas"),
-  let ctx = canvas.getContext("2d");
-
-  // Setting the width and height of the canvas
-  canvas.width = 500;
-  canvas.height = 500;
-
-  // Setting up the letters
-  let letters =
-    "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
-  letters.split("");
-
-  // Setting up the columns
-  var fontSize = 10,
-    columns = canvas.width / fontSize;
-
-  // Setting up the drops
-  var drops: number[] = [];
-  for (var i = 0; i < columns; i++) {
-    drops[i] = 1;
-  }
-
-  // Setting up the draw function
-
-  function draw() {
-    if (ctx != null) {
-      ctx.fillStyle = "rgba(0, 0, 0, .1)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      for (var i = 0; i < drops.length; i++) {
-        var text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillStyle = "#0f0";
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        drops[i]++;
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
-          drops[i] = 0;
-        }
-      }
-    }
-  }
-
-  // Loop the animation
-  // setInterval(draw, 50);
+  }, [angle]);
 
   return (
     <div
+      className="contact-card"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      {/* <canvas>ok</canvas> */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
@@ -97,10 +50,10 @@ function SVGFrame(props: ISvg) {
             y2="0%"
             gradientTransform={"rotate(" + angle + ")"}
           >
-            <stop offset="0%" stop-color="#2dd5ff" stop-opacity="1" />
-            <stop offset="40%" stop-color="white" stop-opacity="1" />
-            <stop offset="60%" stop-color="#3889eb" stop-opacity="1" />
-            <stop offset="100%" stop-color="#2dd5ff" stop-opacity="1" />
+            <stop offset="0%" stopColor="#2dd5ff" stopOpacity="1" />
+            <stop offset="40%" stopColor="white" stopOpacity="1" />
+            <stop offset="60%" stopColor="#3889eb" stopOpacity="1" />
+            <stop offset="100%" stopColor="#2dd5ff" stopOpacity="1" />
           </linearGradient>
         </defs>
         <g stroke="url(#grad1)" fill="url(#grad1)">

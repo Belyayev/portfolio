@@ -64,11 +64,7 @@ main {
 
 .foto-frame {
   opacity: 0;
-  width: 20rem;
-  height: 20rem;
-  border: 1px solid #2dd5ff;
-  background-color: #2dd5ff;
-  animation: slide_up 1.2s forwards;
+  animation: slide-up 1.2s forwards;
 }
 
 .skills {
@@ -113,7 +109,6 @@ footer {
     line-height: 2rem;
   }
   .foto-frame {
-    width: 100%;
     margin-top: 1rem;
   }
 }
@@ -169,8 +164,6 @@ footer {
     line-height: 3rem;
   }
   .foto-frame {
-    width: 16rem;
-    border: 1px solid #2dd5ff;
     margin-left: 0.5rem;
   }
 }
@@ -184,9 +177,6 @@ footer {
     line-height: 4rem;
   }
   .foto-frame {
-    width: 20rem;
-    height: 25rem;
-    border: 1px solid #2dd5ff;
     margin-left: 2rem;
   }
 }
