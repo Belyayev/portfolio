@@ -3,7 +3,7 @@ function Projects() {
     <div>
       <h2 className="general-title">Projects page</h2>
       <div className="project-item">
-        <div className="project-image">image</div>
+        {/* <div className="project-image">image</div> */}
         <div className="project-text">
           <p>
             This portfolio site you're visiting will be the first project I'd
@@ -19,7 +19,7 @@ function Projects() {
         </div>
       </div>
       <div className="project-item">
-        <div className="project-image">image</div>
+        {/* <div className="project-image">image</div> */}
         <div className="project-text">
           <p>
             https://freeshoppinglist.vercel.app/ is my second project I'd like
@@ -32,7 +32,7 @@ function Projects() {
         </div>
       </div>
       <div className="project-item">
-        <div className="project-image">image</div>
+        {/* <div className="project-image">image</div> */}
         <div className="project-text">
           <p>
             The next project was written in C# with Windows forms. This is basic
