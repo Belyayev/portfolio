@@ -58,14 +58,6 @@ function SVGFrame(props: ISvg) {
         width="100%"
         viewBox="0 0 2003 2779"
       >
-        <image
-          mask="url(#mask)"
-          x="0"
-          y="0"
-          width="2000"
-          height="2800"
-          href={avatar}
-        />
         <defs>
           <linearGradient
             id="grad1"
@@ -75,10 +67,10 @@ function SVGFrame(props: ISvg) {
             y2="0%"
             gradientTransform={"rotate(" + angle + ")"}
           >
-            <stop offset="0%" stopColor="#2dd5ff" stopOpacity="1" />
+            <stop offset="30%" stopColor={color} stopOpacity="1" />
             <stop offset="40%" stopColor="white" stopOpacity="1" />
-            <stop offset="60%" stopColor="#3889eb" stopOpacity="1" />
-            <stop offset="100%" stopColor="#2dd5ff" stopOpacity="1" />
+            <stop offset="50%" stopColor={color} stopOpacity="1" />
+            <stop offset="100%" stopColor={color} stopOpacity="1" />
           </linearGradient>
           <linearGradient
             id="grad2"
@@ -90,12 +82,21 @@ function SVGFrame(props: ISvg) {
           >
             <stop offset="0%" stopColor={color} stopOpacity="0" />
             <stop offset={opacity + "%"} stopColor={color} stopOpacity="0" />
-            <stop offset="100%" stopColor={color} stopOpacity="1" />
+            <stop offset="100%" stopColor="lime" stopOpacity="1" />
           </linearGradient>
         </defs>
+        <image
+          mask="url(#mask)"
+          x="0"
+          y="200"
+          width="2000"
+          height="2800"
+          href={avatar}
+          opacity="0.6"
+        />
         <g stroke="url(#grad1)" fill="url(#grad1)">
           <polygon
-            fill={color}
+            fill="black"
             fillOpacity={0.2}
             strokeWidth="20px"
             points="372,103 689,103 819,216 1211,216 1321,128 1796,128 1900,218 1900,1237 1784,1316 1784,1960 1900,2058 1900,2454 1631,2676 1203,2676 1051,2540 731,2540 620,2643 307,2643 166,2530 166,1982 277,1886 277,1345 191,1257 191,251 "

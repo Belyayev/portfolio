@@ -57,14 +57,8 @@ main {
 
 .jumbo-font {
   font-size: 1.8rem;
-  line-height: 2.5rem;
-  padding: 0.5rem;
+  line-height: 2rem;
   animation: slide-right 1.2s forwards;
-}
-
-.foto-frame {
-  opacity: 0;
-  animation: slide-up 1.2s forwards;
 }
 
 .skills {
@@ -83,10 +77,10 @@ main {
 }
 
 .contact-card {
-  padding: 1rem;
+  width: 100%;
   opacity: 0;
-  animation: slide-up 1s forwards;
-  -webkit-animation: slide-up 1s forwards;
+  animation: fade-in 1s forwards;
+  -webkit-animation: fade-in 1s forwards;
 }
 
 footer {
