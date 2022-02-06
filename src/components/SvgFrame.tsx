@@ -23,22 +23,19 @@ function SVGFrame(props: ISvg) {
   }
 
   useEffect(() => {
-    let timer = setInterval(function () {
-      setAngle(angle + 1);
-    }, 40);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, [angle]);
-
-  useEffect(() => {
-    let timer = setInterval(function () {
-      setText1(text1 + "0");
+    let timer = setTimeout(function () {
+      setAngle(angle + 3);
+      setText1(
+        text1 +
+          Math.floor(
+            Math.random() * (Math.floor(1) - Math.ceil(0) + 1) + Math.ceil(0)
+          )
+      );
       if (text1.length > 30) setText1("");
-    }, 40);
+    }, 80);
+
     return () => {
-      clearInterval(timer);
+      clearTimeout(timer);
     };
   });
 
@@ -95,6 +92,7 @@ function SVGFrame(props: ISvg) {
           letterSpacing={70}
           fontSize={150}
           fill={color}
+          fillOpacity="0.5"
           fontFamily="Share Tech Mono"
           writingMode="vertical-rl"
           text-orientation="upright"
