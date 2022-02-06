@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import avatar from "../img/person.png";
 
 interface ISvg {
   x?: number;
@@ -57,6 +58,14 @@ function SVGFrame(props: ISvg) {
         width="100%"
         viewBox="0 0 2003 2779"
       >
+        <image
+          mask="url(#mask)"
+          x="0"
+          y="0"
+          width="2000"
+          height="2800"
+          href={avatar}
+        />
         <defs>
           <linearGradient
             id="grad1"
