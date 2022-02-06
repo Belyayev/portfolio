@@ -49,7 +49,7 @@ function SVGFrame(props: ISvg) {
 
   return (
     <div
-      className="contact-card"
+      className="photo-frame"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
