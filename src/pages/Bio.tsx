@@ -1,7 +1,7 @@
 function Bio() {
   return (
     <div>
-      <h1>Bio page</h1>
+      <h2 className="general-title">Bio page</h2>
     </div>
   );
 }

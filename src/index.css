@@ -18,6 +18,9 @@ body {
   color: #2dd5ff;
   text-align: center;
 
+  transform: translate(0, 0, 0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;

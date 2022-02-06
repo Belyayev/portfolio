@@ -2,8 +2,10 @@ import SVGDialCircle from "../components/SvgDialCircle";
 
 function Skills() {
   return (
-    <>
-      <h2>My skills level at different technologies:</h2>
+    <div>
+      <h2 className="general-title">
+        My skills level at different technologies:
+      </h2>
       <div className="skills">
         <SVGDialCircle color="#2dd5ff" text="HTML" value={95} delay={100} />
         <SVGDialCircle color="#2dd5ff" text="CSS" value={95} delay={200} />
@@ -33,7 +35,7 @@ function Skills() {
           delay={1200}
         />
       </div>
-    </>
+    </div>
   );
 }
 

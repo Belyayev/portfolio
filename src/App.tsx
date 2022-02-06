@@ -25,7 +25,7 @@ function App() {
               <div className="large-menu">
                 <SvgButton
                   active={path === "/"}
-                  color={path === "/" ? "lime" : "rgb(45, 213, 255)"}
+                  color={path === "/" ? "lime" : "#2dd5ff"}
                   text="HOME"
                   x={100}
                 />
@@ -38,7 +38,7 @@ function App() {
               <div className="large-menu">
                 <SvgButton
                   active={path === "/projects"}
-                  color={path === "/projects" ? "lime" : "rgb(45, 213, 255)"}
+                  color={path === "/projects" ? "lime" : "#2dd5ff"}
                   text="PROJECTS"
                   x={140}
                 />
@@ -51,7 +51,7 @@ function App() {
               <div className="large-menu">
                 <SvgButton
                   active={path === "/bio"}
-                  color={path === "/bio" ? "lime" : "rgb(45, 213, 255)"}
+                  color={path === "/bio" ? "lime" : "#2dd5ff"}
                   text="BIO"
                   x={80}
                 />
@@ -64,7 +64,7 @@ function App() {
               <div className="large-menu">
                 <SvgButton
                   active={path === "/skills"}
-                  color={path === "/skills" ? "lime" : "rgb(45, 213, 255)"}
+                  color={path === "/skills" ? "lime" : "#2dd5ff"}
                   text="SKILLS"
                   x={110}
                 />
@@ -77,7 +77,7 @@ function App() {
               <div className="large-menu">
                 <SvgButton
                   active={path === "/contacts"}
-                  color={path === "/contacts" ? "lime" : "rgb(45, 213, 255)"}
+                  color={path === "/contacts" ? "lime" : "#2dd5ff"}
                   text="CONTACTS"
                   x={120}
                 />
