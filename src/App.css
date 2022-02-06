@@ -86,16 +86,21 @@ main {
 
 .contacts {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
 .contact-card {
   display: flex;
-  width: 100%;
+  width: 80%;
   margin: 0.5rem;
+  animation: fade-in 1s forwards;
+  -webkit-animation: fade-in 1s forwards;
+}
+.title {
+  width: 100vw;
 }
 
 footer {
@@ -170,8 +175,11 @@ footer {
   }
   .contacts {
     display: flex;
-    width: 70%;
+    width: 80%;
     margin: auto;
+  }
+  .title {
+    margin: 1rem;
   }
   .photo-frame {
     width: 45%;
