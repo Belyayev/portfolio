@@ -13,6 +13,8 @@ function SVGFrame(props: ISvg) {
   const [hover, setHover] = useState(false);
   const [angle, setAngle] = useState(0);
   const [text1, setText1] = useState("");
+  const [opacity, setOpacity] = useState(0);
+  const [xPos, setXPos] = useState(1000);
 
   if (hover) {
   }
@@ -31,8 +33,13 @@ function SVGFrame(props: ISvg) {
             Math.random() * (Math.floor(1) - Math.ceil(0) + 1) + Math.ceil(0)
           )
       );
-      if (text1.length > 30) setText1("");
-    }, 80);
+      setOpacity(opacity + 2);
+      if (text1.length > 30) {
+        setText1("");
+        setOpacity(0);
+        setXPos(Math.floor(Math.random() * (2000 - 400 + 1)) + 400);
+      }
+    }, 150);
 
     return () => {
       clearTimeout(timer);
@@ -64,6 +71,18 @@ function SVGFrame(props: ISvg) {
             <stop offset="60%" stopColor="#3889eb" stopOpacity="1" />
             <stop offset="100%" stopColor="#2dd5ff" stopOpacity="1" />
           </linearGradient>
+          <linearGradient
+            id="grad2"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+            gradientTransform={"rotate(90)"}
+          >
+            <stop offset="0%" stopColor={color} stopOpacity="0" />
+            <stop offset={opacity + "%"} stopColor={color} stopOpacity="0" />
+            <stop offset="100%" stopColor={color} stopOpacity="1" />
+          </linearGradient>
         </defs>
         <g stroke="url(#grad1)" fill="url(#grad1)">
           <polygon
@@ -85,14 +104,14 @@ function SVGFrame(props: ISvg) {
             points="372,103 689,103 819,216 1211,216 1321,128 1796,128 1900,218 1900,1237 1784,1316 1784,1960 1900,2058 1900,2454 1631,2676 1203,2676 1051,2540 731,2540 620,2643 307,2643 166,2530 166,1982 277,1886 277,1345 191,1257 191,251 "
           />
         </mask>
+
         <text
           mask="url(#mask)"
-          x="800"
+          x={xPos}
           y="0"
           letterSpacing={70}
           fontSize={150}
-          fill={color}
-          fillOpacity="0.5"
+          fill="url(#grad2)"
           fontFamily="Share Tech Mono"
           writingMode="vertical-rl"
           text-orientation="upright"
