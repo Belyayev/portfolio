@@ -12,6 +12,7 @@ interface ISvg {
 function SVGFrame(props: ISvg) {
   const [hover, setHover] = useState(false);
   const [angle, setAngle] = useState(0);
+  const [text1, setText1] = useState("");
 
   if (hover) {
   }
@@ -25,10 +26,21 @@ function SVGFrame(props: ISvg) {
     let timer = setInterval(function () {
       setAngle(angle + 1);
     }, 40);
+
     return () => {
       clearInterval(timer);
     };
   }, [angle]);
+
+  useEffect(() => {
+    let timer = setInterval(function () {
+      setText1(text1 + "0");
+      if (text1.length > 30) setText1("");
+    }, 40);
+    return () => {
+      clearInterval(timer);
+    };
+  });
 
   return (
     <div
@@ -88,7 +100,7 @@ function SVGFrame(props: ISvg) {
           text-orientation="upright"
           rotate={270}
         >
-          {"1110010100101010001011110101010100010"}
+          {text1}
         </text>
       </svg>
     </div>
