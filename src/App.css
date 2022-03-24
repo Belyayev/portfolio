@@ -4,13 +4,14 @@ start by reseting all elements to have no margin or padding
 * {
   margin: 0;
   padding: 0;
-  background-color: black;
+  
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+  background-color: black;
 }
 
 .App {
