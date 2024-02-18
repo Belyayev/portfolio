@@ -20,7 +20,7 @@ function SVGFrame(props: ISvg) {
   if (hover) {
   }
 
-  let color = "lime";
+  let color = "black";
   if (props.color) {
     color = props.color;
   }
@@ -82,7 +82,7 @@ function SVGFrame(props: ISvg) {
           >
             <stop offset="0%" stopColor={color} stopOpacity="0" />
             <stop offset={opacity + "%"} stopColor={color} stopOpacity="0" />
-            <stop offset="100%" stopColor="lime" stopOpacity="1" />
+            <stop offset="100%" stopColor="white" stopOpacity="0.3" />
           </linearGradient>
         </defs>
         <image
@@ -92,7 +92,7 @@ function SVGFrame(props: ISvg) {
           width="2000"
           height="2800"
           href={avatar}
-          opacity="0.6"
+          opacity="1"
         />
         <g stroke="url(#grad1)" fill="url(#grad1)">
           <polygon

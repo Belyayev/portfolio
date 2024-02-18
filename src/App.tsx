@@ -29,7 +29,7 @@ function App() {
                   active={path === "/"}
                   color={path === "/" ? "lime" : "#2dd5ff"}
                   text="Home"
-                  x={100}
+                  x={90}
                 />
               </div>
               <div className="small-menu">
@@ -41,8 +41,8 @@ function App() {
                 <SvgButton
                   active={path === "/projects"}
                   color={path === "/projects" ? "lime" : "#2dd5ff"}
-                  text="Web Apps"
-                  x={110}
+                  text="My Projects"
+                  x={130}
                 />
               </div>
               <div className="small-menu">
@@ -100,12 +100,11 @@ function App() {
           </Routes>
         </main>
         <footer>
-          <span style={{ marginRight: "1.5rem" }}>
-            <IoHome /> Calgary, AB, Canada
-          </span>
-          <span>
-            <MdMarkEmailRead /> mike.x.coder@gmail.com
-          </span>
+          <div className="footer">
+            <IoHome />
+            Calgary, Canada <MdMarkEmailRead style={{ marginLeft: "1.5rem" }} />
+            mike.x.coder@gmail.com
+          </div>
         </footer>
       </BrowserRouter>
     </div>
