@@ -62,6 +62,15 @@ main {
   animation: slide-right 1.2s forwards;
 }
 
+.link {
+  font-weight: bold;
+  color: #2dd5ff;
+}
+
+.link:hover {
+  color: white;
+}
+
 .project-item {
   display: flex;
   flex-direction: row;
@@ -206,6 +215,23 @@ footer {
   .photo-frame {
     width: 45%;
   }
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (min-width: 1200px) {

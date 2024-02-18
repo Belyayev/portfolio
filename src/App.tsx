@@ -62,7 +62,7 @@ function App() {
                 <img src={BioIcon} alt="Bio" />
               </div>
             </NavLink>
-            <NavLink to="/skills" onClick={() => setPath("/archviz")}>
+            <NavLink to="/archviz" onClick={() => setPath("/archviz")}>
               <div className="large-menu">
                 <SvgButton
                   active={path === "/archviz"}
@@ -95,7 +95,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/bio" element={<Bio />} />
-            <Route path="/skills" element={<ArchViz />} />
+            <Route path="/archviz" element={<ArchViz />} />
             <Route path="/contacts" element={<Contacts />} />
           </Routes>
         </main>
