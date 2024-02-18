@@ -10,6 +10,8 @@ import ProjectsIcon from "./img/Projects.svg";
 import BioIcon from "./img/Bio.svg";
 import SkillsIcon from "./img/Skills.svg";
 import ContactsIcon from "./img/Contacts.svg";
+import { IoHome } from "react-icons/io5";
+import { MdMarkEmailRead } from "react-icons/md";
 
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { useState } from "react";
@@ -98,7 +100,12 @@ function App() {
           </Routes>
         </main>
         <footer>
-          <p>Mike Belyayev (c) 2022</p>
+          <span style={{ marginRight: "1.5rem" }}>
+            <IoHome /> Calgary, AB, Canada
+          </span>
+          <span>
+            <MdMarkEmailRead /> mike.x.coder@gmail.com
+          </span>
         </footer>
       </BrowserRouter>
     </div>
