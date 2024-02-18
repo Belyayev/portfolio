@@ -83,14 +83,11 @@ main {
   text-align: justify;
 }
 
-.skills {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-gap: 0.2rem;
-}
-
-.skills * {
-  grid-column: span 1;
+.archviz {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  text-indent: 2rem;
 }
 
 .skill-card {
@@ -140,8 +137,7 @@ footer {
       "main main" auto
       "footer footer" min-content;
   }
-  .skills {
-    grid-template-columns: 1fr 1fr;
+  .archviz {
   }
   .jumbo-font {
     font-size: 2rem;
@@ -156,8 +152,7 @@ footer {
       "main main main" auto
       "footer footer footer" min-content / 1fr 1fr 1fr;
   }
-  .skills {
-    grid-template-columns: 1fr 1fr 1fr;
+  .archviz {
   }
   .small-menu {
     width: 4.5rem;
@@ -184,8 +179,7 @@ footer {
   .small-menu {
     display: none;
   }
-  .skills {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .archviz {
   }
   .general-title {
     margin: 1rem auto;

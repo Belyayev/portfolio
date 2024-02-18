@@ -156,7 +156,7 @@ function SVGContacts(props: ISvg) {
                   fill={txtColor}
                   stroke={txtColor}
                   fontFamily="Share Tech Mono"
-                  fontSize="30"
+                  fontSize="25"
                   cursor="pointer"
                 >
                   GitHub
@@ -204,7 +204,7 @@ function SVGContacts(props: ISvg) {
                   fill={txtColor}
                   stroke={txtColor}
                   fontFamily="Share Tech Mono"
-                  fontSize="30"
+                  fontSize="25"
                   cursor="pointer"
                 >
                   LinkedIn
@@ -244,7 +244,7 @@ function SVGContacts(props: ISvg) {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="mailto: 4xgood@gmail.com"
+                href="mailto: mike.x.coder@gmail.com"
               >
                 <text
                   x="140"
@@ -252,10 +252,10 @@ function SVGContacts(props: ISvg) {
                   fill={txtColor}
                   stroke={txtColor}
                   fontFamily="Share Tech Mono"
-                  fontSize="30"
+                  fontSize="22"
                   cursor="pointer"
                 >
-                  4xgood@gmail.com
+                  mike.x.coder@gmail.com
                 </text>
                 <text
                   x="140"
