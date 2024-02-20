@@ -101,9 +101,14 @@ function App() {
         </main>
         <footer>
           <div className="footer">
-            <IoHome />
-            Calgary, Canada <MdMarkEmailRead style={{ marginLeft: "1.5rem" }} />
-            mike.x.coder@gmail.com
+            <div>
+              <IoHome />
+              Calgary, Canada
+            </div>
+            <div>
+              <MdMarkEmailRead style={{ marginLeft: "1.5rem" }} />
+              mike.x.coder@gmail.com
+            </div>
           </div>
         </footer>
       </BrowserRouter>
