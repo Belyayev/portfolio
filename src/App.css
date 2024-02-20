@@ -8,8 +8,8 @@ start by reseting all elements to have no margin or padding
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: black;
 }
 
@@ -167,7 +167,7 @@ footer {
       "header header" min-content
       "main main" auto
       "footer footer" min-content;
-    max-height: 100%;
+    height: 100%;
     max-width: 96%;
   }
   .home {
