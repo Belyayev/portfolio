@@ -2,14 +2,17 @@ import SVGFrame from "../components/SvgFrame";
 import { FaLaptopCode } from "react-icons/fa6";
 import { BsDatabaseFillGear } from "react-icons/bs";
 import { RiLightbulbFlashFill } from "react-icons/ri";
+import { CSSProperties } from "react";
 
 function Home() {
   return (
     <div>
       <div className="home">
         <div>
-          <div className="jumbo-font" style={{ borderBottom: "solid 2px" }}>
-            Mike Belyayev
+          <div className="stack" style={{ "--stacks": 3 } as CSSProperties}>
+            <span style={{ "--index": 0 } as CSSProperties}>Mike Belyayev</span>
+            <span style={{ "--index": 1 } as CSSProperties}>Mike Belyayev</span>
+            <span style={{ "--index": 2 } as CSSProperties}>Mike Belyayev</span>
           </div>
           <div className="jumbo-font">
             <FaLaptopCode style={{ marginRight: "0.5rem" }} />
