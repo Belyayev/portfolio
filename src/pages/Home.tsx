@@ -1,6 +1,6 @@
 import SVGFrame from "../components/SvgFrame";
 import { FaLaptopCode } from "react-icons/fa6";
-import { IoColorPaletteSharp } from "react-icons/io5";
+import { BsDatabaseFillGear } from "react-icons/bs";
 import { RiLightbulbFlashFill } from "react-icons/ri";
 
 function Home() {
@@ -13,53 +13,55 @@ function Home() {
           </div>
           <div className="jumbo-font">
             <FaLaptopCode style={{ marginRight: "0.5rem" }} />
-            SW developer
+            Software developer
           </div>
           <div className="jumbo-font">
-            <IoColorPaletteSharp style={{ marginRight: "0.5rem" }} />
-            Graphics designer
+            <BsDatabaseFillGear style={{ marginRight: "0.5rem" }} />
+            Data Engineer
           </div>
           <div className="jumbo-font">
             <RiLightbulbFlashFill style={{ marginRight: "0.5rem" }} />
-            Hi-Tech geek
+            Tech Creator
           </div>
         </div>
         <SVGFrame color="#2dd5ff" />
       </div>
       <div className="introText">
         <p>
-          My name is Mike. I am a software developer and a technology
-          enthusiast. I enjoy building beautiful and functional web applications
-          and create things.
+          Hi, I'm Mike. As a software developer and tech enthusiast, I'm
+          passionate about crafting beautiful and functional web applications.
+          My journey began as an artist and graphic designer in the late '90s,
+          long before I had access to a computer. Even now, I find magic in
+          painting on a canvas with a real brush.
         </p>
+
         <p>
-          I've started my journey as an artist and graphic designer back in late
-          90's before I had access to computer. Up to this day I still enjoy
-          painting on a canvas. There something magical about real (non-digital)
-          paint brush.
+          Transitioning to digital art, I've mastered tools like Photoshop,
+          Illustrator, Premiere, and After Effects, along with 3D animation and
+          motion graphics software such as Blender and Unreal Engine. These
+          tools are just part of my creative arsenal, and I'm always exploring
+          new techniques, from welding steel to sculpting with concrete.
         </p>
+
         <p>
-          With the help of computers I've learned how to create digital art.
-          Anything from static images to complex 3D animation and motion
-          graphics. I am proficient in most Adobe tools like Photoshop,
-          Illustrator, Premiere and After Effects as well as a dozen of other
-          tools like Blender 3D or Unreal Engine. At the end of the day those
-          are just tools that I use to get the job done. And yes, I discover and
-          learn new tools all the time. How about welding steel or making a
-          sculture out of the concrete? Yup, I do that too when weather is good
-          :).
+          Since 2020, I've been developing software professionally for a major
+          global energy company, working with a team to create complex web
+          applications. As a "frontend-heavy" full-stack developer, I thrive on
+          both building projects for friends and family and taking on freelance
+          work in my spare time.
         </p>
+
         <p>
-          Starting 2020 I was professionally developing software in a major
-          global energy company. I am working with the team of developers
-          creating complex web applications and systems. I am a "frontend heavy"
-          full stack developer.
+          Starting in 2024, I transitioned to a data engineer role, further
+          expanding my skills. This has allowed me to blend my software
+          development experience with data analysis capabilities, making me an
+          even more versatile and effective developer. Having strong data
+          analysis skills is a tremendous asset for developers, as it enhances
+          decision-making, problem-solving, and the ability to create
+          data-driven applications.
         </p>
-        <p>
-          I also enjoy building a hobby projects, web applications for friends
-          and family and some odd freelance projects in my spare time. Check out
-          my projects page to see what I've been working on recently.
-        </p>
+
+        <p>Check out my projects page to see what I've been up to!</p>
       </div>
     </div>
   );
