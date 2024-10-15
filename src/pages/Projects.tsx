@@ -1,33 +1,50 @@
+import prj_1 from "../img/FreeShoppingListLogin.png";
+import { CSSProperties } from "react";
+
 function Projects() {
   return (
     <div>
-      <h2 className="general-title">Projects page</h2>
-      <div className="project-item">
-        {/* <div className="project-image">image</div> */}
-        <div className="project-text">
-          <p>
-            This portfolio site you're visiting will be the first project I'd
-            like to talk about. I've styled it in my favourite Sci-Fi theme and
-            built lots of custom SVG elements to create it. Working on any
-            project I like to learn things. Building this portfolio I've enjoyed
-            playing with SVG animations using CSS and JS. Although SVG isn't the
-            most user friendly tool when it comes to graphics design, it does
-            provide fair amount of flexibility and allows to build interesting
-            interactive graphics for web applications. This page is also built
-            responsive using CSS grids and media queries.
-          </p>
-        </div>
+      <div className="stack" style={{ "--stacks": 3 } as CSSProperties}>
+        <span style={{ "--index": 0 } as CSSProperties}>My Projects</span>
+        <span style={{ "--index": 1 } as CSSProperties}>My Projects</span>
+        <span style={{ "--index": 2 } as CSSProperties}>My Projects</span>
       </div>
       <div className="project-item">
-        {/* <div className="project-image">image</div> */}
+        <img width="200" height="200" src={prj_1} alt="FreeShoppingList" />
         <div className="project-text">
+          <div>
+            Live demo (production):{" "}
+            <a href="https://freeshoppinglist.vercel.app" target="blank">
+              https://freeshoppinglist.vercel.app
+            </a>
+          </div>
+          <div>
+            API (backend):{" "}
+            <a
+              href="https://github.com/Belyayev/shopping-list-api"
+              target="blank"
+            >
+              https://github.com/Belyayev/shopping-list-api
+            </a>
+          </div>
+          <div>
+            UI (frontend):{" "}
+            <a
+              href="https://github.com/Belyayev/shopping-list-ui"
+              target="blank"
+            >
+              https://github.com/Belyayev/shopping-list-ui
+            </a>
+          </div>
           <p>
-            https://freeshoppinglist.vercel.app/ is my second project I'd like
-            to demo. It was written using MERN stack (MongoDB, Express, React,
-            NodeJS). This was my first full stack application and I've learned
-            whole range of technologies required to build end to end production
-            ready tool (databases, APIs, Redux for state management, password
-            encryption, CSS styling, etc.)
+            Free Shopping List is a full-stack web application built on the MERN
+            stack. I used Node.js for the backend and React.js for the UI. I
+            first created this project in 2022 to solve a real-world problem for
+            my family and friends. Exchanging grocery shopping lists via text
+            was cumbersome, so I decided to make an app. It is fully responsive,
+            designed with mobile users in mind. It includes basic
+            authentication, drag-and-drop sorting, list sharing between users,
+            and other features.
           </p>
         </div>
       </div>

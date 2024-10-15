@@ -50,6 +50,11 @@ main {
   justify-self: center;
 }
 
+a {
+  text-decoration: none;
+  color: aqua;
+}
+
 p {
   text-align: justify;
   text-indent: 2rem;
@@ -86,6 +91,7 @@ p {
   display: flex;
   flex-direction: row;
   margin: 0.5rem;
+  border-bottom: solid 1px #2dd5ff;
 }
 
 .project-image {
@@ -97,10 +103,8 @@ p {
 .project-text {
   width: 100%;
   text-align: left;
-  border: 1px solid #2dd5ff;
   padding: 0.5rem;
-  margin: 0.5rem;
-  text-align: justify;
+  margin: 0 0.5rem;
 }
 
 .archviz {
@@ -181,8 +185,8 @@ footer {
   .archviz {
   }
   .jumbo-font {
-    font-size: 2.2rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 2.8rem;
   }
   .footer {
     flex-direction: column;
@@ -204,8 +208,8 @@ footer {
     margin: 1rem;
   }
   .jumbo-font {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 2.2rem;
+    line-height: 3.5rem;
   }
   .footer {
     flex-direction: row;
@@ -352,7 +356,7 @@ footer {
 .stack {
   display: grid;
   grid-template-columns: 1fr;
-  border-bottom: 0.4rem #2dd5ff groove;
+  border-bottom: 0.1rem #2dd5ff solid;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
