@@ -8,13 +8,13 @@ start by reseting all elements to have no margin or padding
 
 html,
 body {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: black;
 }
 
 .App {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   max-width: 98%;
   overflow: hidden;
@@ -171,8 +171,8 @@ footer {
     grid:
       "header header" min-content
       "main main" auto
-      "footer footer" min-content;
-    height: 100%;
+      "footer footer " min-content;
+    height: calc(var(--vh, 1vh) * 100);
     max-width: 96%;
   }
   .home {
@@ -199,7 +199,7 @@ footer {
       "header header header" min-content
       "main main main" auto
       "footer footer footer" min-content / 1fr 1fr 1fr;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
   }
   .archviz {
   }

@@ -4,6 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+function setHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+
+window.addEventListener("resize", setHeight);
+window.addEventListener("orientationchange", setHeight);
+setHeight();
+
 ReactDOM.render(
   <React.StrictMode>
     <meta
