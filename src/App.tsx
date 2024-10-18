@@ -1,14 +1,12 @@
 import "./App.css";
 import SvgButton from "./components/SvgButton";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Bio from "./pages/Bio";
-import ArchViz from "./pages/ArchViz";
+import Portfolio from "./pages/Portfolio";
+import Resume from "./pages/Resume";
 import Contacts from "./pages/Contacts";
 import HomeIcon from "./img/Home.svg";
-import ProjectsIcon from "./img/Projects.svg";
-import BioIcon from "./img/Bio.svg";
-import SkillsIcon from "./img/Skills.svg";
+import PortfolioIcon from "./img/Portfolio.svg";
+import ResumeIcon from "./img/Resume.svg";
 import ContactsIcon from "./img/Contacts.svg";
 import { IoHome } from "react-icons/io5";
 import { MdMarkEmailRead } from "react-icons/md";
@@ -36,45 +34,33 @@ function App() {
                 <img src={HomeIcon} alt="Home" />
               </div>
             </NavLink>
-            <NavLink to="/projects" onClick={() => setPath("/projects")}>
+            <NavLink to="/resume" onClick={() => setPath("/resume")}>
               <div className="large-menu">
                 <SvgButton
-                  active={path === "/projects"}
-                  color={path === "/projects" ? "lime" : "#2dd5ff"}
-                  text="My Projects"
-                  x={130}
-                />
-              </div>
-              <div className="small-menu">
-                <img src={ProjectsIcon} alt="Projects" />
-              </div>
-            </NavLink>
-            <NavLink to="/bio" onClick={() => setPath("/bio")}>
-              <div className="large-menu">
-                <SvgButton
-                  active={path === "/bio"}
-                  color={path === "/bio" ? "lime" : "#2dd5ff"}
-                  text="Bio"
+                  active={path === "/resume"}
+                  color={path === "/resume" ? "lime" : "#2dd5ff"}
+                  text="Resume"
                   x={80}
                 />
               </div>
               <div className="small-menu">
-                <img src={BioIcon} alt="Bio" />
+                <img src={ResumeIcon} alt="resume" />
               </div>
             </NavLink>
-            <NavLink to="/archviz" onClick={() => setPath("/archviz")}>
+            <NavLink to="/portfolio" onClick={() => setPath("/portfolio")}>
               <div className="large-menu">
                 <SvgButton
-                  active={path === "/archviz"}
-                  color={path === "/archviz" ? "lime" : "#2dd5ff"}
-                  text="Arch.Viz"
-                  x={110}
+                  active={path === "/portfolio"}
+                  color={path === "/portfolio" ? "lime" : "#2dd5ff"}
+                  text="Portfolio"
+                  x={130}
                 />
               </div>
               <div className="small-menu">
-                <img src={SkillsIcon} alt="ArchViz" />
+                <img src={PortfolioIcon} alt="Portfolio" />
               </div>
             </NavLink>
+
             <NavLink to="/contacts" onClick={() => setPath("/contacts")}>
               <div className="large-menu">
                 <SvgButton
@@ -93,9 +79,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/bio" element={<Bio />} />
-            <Route path="/archviz" element={<ArchViz />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contacts" element={<Contacts />} />
           </Routes>
         </main>

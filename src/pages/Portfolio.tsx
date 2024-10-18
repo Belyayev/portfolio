@@ -1,16 +1,19 @@
 import prj_1 from "../img/FreeShoppingListLogin.png";
 import { CSSProperties } from "react";
+import YoutubeEmbed from "../components/YoutubeEmbed";
 
-function Projects() {
+function Portfolio() {
   return (
     <div>
       <div className="stack" style={{ "--stacks": 3 } as CSSProperties}>
-        <span style={{ "--index": 0 } as CSSProperties}>My Projects</span>
-        <span style={{ "--index": 1 } as CSSProperties}>My Projects</span>
-        <span style={{ "--index": 2 } as CSSProperties}>My Projects</span>
+        <span style={{ "--index": 0 } as CSSProperties}>Portfolio</span>
+        <span style={{ "--index": 1 } as CSSProperties}>Portfolio</span>
+        <span style={{ "--index": 2 } as CSSProperties}>Portfolio</span>
       </div>
       <div className="project-item">
-        <img width="200" height="200" src={prj_1} alt="FreeShoppingList" />
+        <div>
+          <img className="portfolioImage" src={prj_1} alt="FreeShoppingList" />
+        </div>
         <div className="project-text">
           <div>
             Live demo (production):{" "}
@@ -49,15 +52,37 @@ function Projects() {
         </div>
       </div>
       <div className="project-item">
-        {/* <div className="project-image">image</div> */}
+        <div className="video-responsive">
+          <YoutubeEmbed embedId="kh0QGt24vjA" />
+        </div>
         <div className="project-text">
+          <div>
+            Compiled demo project:{" "}
+            <a
+              href="https://filedn.com/lsWfTQIKr30JnApFhpa8hNf/Grafton/"
+              target="blank"
+            >
+              Download
+            </a>
+          </div>
+          <div>
+            Exterior demo:{" "}
+            <a href="https://www.youtube.com/embed/kh0QGt24vjA" target="blank">
+              Watch video
+            </a>
+          </div>
+          <div>
+            Inerior demo:{" "}
+            <a href="https://www.youtube.com/embed/5vY-wobT0yA" target="blank">
+              Watch video
+            </a>
+          </div>
           <p>
-            The next project was written in C# with Windows forms. This is basic
-            "Paint"-like application that supports touch screen. It is easier to
-            use for small children with all tools accessible on the screen by
-            single click or touch. In full screen mode this application hides
-            all other windows, so you don't need to worry about kids opening
-            other things while drawing on your PC.
+            Throughout the years I've tried many styles and applications
+            creating visuals. Architectural Vizualization a.k.a. "ArchViz" was
+            one of them. Below I present a project that was modeled using
+            Blender and rendered in Unreal Engine 5. You can download combiled
+            version and walk around the scene as a firt person.
           </p>
         </div>
       </div>
@@ -65,4 +90,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Portfolio;

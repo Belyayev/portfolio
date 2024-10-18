@@ -1,22 +1,17 @@
-/*
-start by reseting all elements to have no margin or padding
-*/
 * {
   margin: 0;
   padding: 0;
 }
 
-html,
 body {
   height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   background-color: black;
+  overflow: hidden;
 }
 
 .App {
-  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
-  max-width: 98%;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 0.5rem;
@@ -152,7 +147,7 @@ p {
 
 footer {
   grid-area: footer;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .footer {
@@ -289,13 +284,17 @@ footer {
   }
 }
 
+.portfolioImage {
+  min-width: 15rem;
+  width: 15rem;
+}
+
 .video-responsive {
   overflow: hidden;
-  padding-bottom: 56.25%;
   position: relative;
-  height: 0;
+  min-width: 15rem;
+  min-height: 12rem;
   border-radius: 1rem;
-  margin-top: 1rem;
 }
 
 .video-responsive iframe {
