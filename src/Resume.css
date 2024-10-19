@@ -1,0 +1,59 @@
+.resume {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.section {
+  border-bottom: 1px solid #2dd5ff;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+}
+
+.section-header:hover {
+  background-color: black;
+  color: aqua;
+}
+
+.section-details {
+  list-style-type: disc;
+  margin-left: 3rem;
+}
+
+.job-title {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+.date {
+  white-space: nowrap;
+}
+
+.textRegular {
+  margin-left: 1rem;
+  font-weight: 100;
+}
+
+.textLabel {
+  color: aqua;
+  text-decoration: underline;
+}
+
+.block {
+  margin: 1rem 0;
+}
+
+ul {
+  margin-left: 2rem;
+
+  li {
+    line-height: 2rem;
+  }
+}
