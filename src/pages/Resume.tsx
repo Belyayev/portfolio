@@ -43,7 +43,7 @@ function Resume() {
         </div>
         <div className="block">
           <h1>
-            <span className="textLabel">Summary of Qualifications:</span>
+            <span className="textLabel">Qualifications:</span>
           </h1>
           <ul>
             <li>
@@ -64,13 +64,27 @@ function Resume() {
         </div>
         <div>
           <h1>
-            <span className="textLabel">Professional Experience:</span>
+            <span className="textLabel">Experience:</span>
           </h1>
         </div>
         <Section
+          jobTitle="Data Engineer"
+          workPlace="Imperial, Calgary, AB"
+          date="Apr 2023 - present"
+          details={[
+            "Development and optimization of ETL processes for data integration and transformation.",
+            "Management and maintenance of SQL databases, ensuring efficient data storage and retrieval.",
+            "Data processing and analysis to support business intelligence and data-driven decision making.",
+            "Implementation of data pipelines and workflows to support various data projects and analytics initiatives.",
+            "Collaboration with data scientists and analysts to understand data requirements and provide necessary support.",
+            "Utilizing cloud services and tools like Azure for data storage, processing, and analysis.",
+            "Adhering to Agile methodologies and working within a small team of data professionals.",
+          ]}
+        />
+        <Section
           jobTitle="Software Developer"
-          workPlace="ExxonMobil Canada / Imperial, Calgary, AB"
-          date="Oct 2020 – present"
+          workPlace="Imperial, Calgary, AB"
+          date="Oct 2020 - Apr 2023"
           details={[
             "Development of the Web hosted applications for the company such as time management and work permitting, well monitoring and maintenance, value tracking of the field processes.",
             "Heavy front end focus that includes UI/UX user research, design and implementation.",
@@ -141,11 +155,15 @@ function Resume() {
           ]}
         />
         <div className="block">
-          <h1>
+          <h1 style={{ marginBottom: "1rem" }}>
             <span className="textLabel">Education:</span>
           </h1>
-          <div>Bachelor of Science, in Mechanical Engineering</div>
-          <div>1999 – 2004 West Kazakhstan Technical University</div>
+          <div className="job-title">
+            Bachelor of Science, in Mechanical Engineering
+          </div>
+          <div className="job-title">
+            West Kazakhstan Technical University, 1999 - 2004
+          </div>
         </div>
       </div>
     </div>

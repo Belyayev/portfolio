@@ -3,15 +3,16 @@
   padding: 0;
 }
 
+html,
 body {
-  height: calc(var(--vh, 1vh) * 100);
+  /* height: calc(var(--vh, 1vh) * 100); */
+  height: 100%;
   width: 100vw;
   background-color: black;
   overflow: hidden;
 }
 
 .App {
-  width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 0.5rem;
@@ -137,6 +138,7 @@ p {
 .contact-card {
   display: flex;
   width: 80%;
+  max-width: 30rem;
   margin: 0.5rem;
   animation: fade-in 1s forwards;
   -webkit-animation: fade-in 1s forwards;
@@ -169,14 +171,9 @@ footer {
       "main main" auto
       "footer footer " min-content;
     height: calc(var(--vh, 1vh) * 100);
-    max-width: 96%;
   }
   .main {
     max-width: 100vw;
-  }
-
-  .home {
-    width: 98%;
   }
 
   .project-item {
@@ -233,6 +230,7 @@ footer {
       ". . header header header header . ." min-content
       ". . main main main main . ." auto
       ". . footer footer footer footer . ." min-content;
+    height: calc(var(--vh, 1vh) * 100);
   }
   main {
     width: 50rem;
@@ -247,8 +245,6 @@ footer {
   }
   .small-menu {
     display: none;
-  }
-  .archviz {
   }
   .general-title {
     margin: 1rem auto;
