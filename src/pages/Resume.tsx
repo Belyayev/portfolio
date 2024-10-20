@@ -95,7 +95,7 @@ function Resume() {
         <Section
           jobTitle="Network Analyst"
           workPlace="ExxonMobil Canada, Calgary, AB"
-          date="Sep 2015 – Oct 2020"
+          date="Sep 2015 - Oct 2020"
           details={[
             "Supported large corporate network built on Cisco and Juniper devices.",
             "Day to day monitoring and troubleshooting, configuration updates and reporting.",
@@ -106,7 +106,7 @@ function Resume() {
         <Section
           jobTitle="IT Projects Analyst"
           workPlace="ExxonMobil Canada, Calgary, AB"
-          date="Sep 2010 – Oct 2015"
+          date="Sep 2010 - Oct 2015"
           details={[
             "Worked on many projects across Canada, US and Africa to implement IT infrastructure on the drilling rigs. Offshore and land. L4 business networks and L3 process control.",
             "Designed, deployed and maintained various networks including fiber, wireless, satellite and cellular technology.",
@@ -115,41 +115,38 @@ function Resume() {
           ]}
         />
         <Section
-          jobTitle="Technical Analyst – Network"
+          jobTitle="Network Analyst"
           workPlace="AEGON Canada, Toronto, ON"
-          date="Apr 2010 – Sep 2010"
+          date="Apr 2010 - Sep 2010"
           details={[
             "Supported network infrastructure and Cisco IP / Nortel PBX telephony at company data center.",
             "Virtual servers support built on VMware and Hyper-V.",
           ]}
         />
-
         <Section
           jobTitle="IT Infrastructure Analyst"
           workPlace="ExxonMobil, Atyrau, Kazakhstan"
-          date="Apr 2008 – Feb 2010"
+          date="Apr 2008 - Feb 2010"
           details={[
             "Provided level-2 onsite IT support for 2 main upstream offices and remote drilling sites.",
             "Supported IT infrastructure: hardware and software installation, backup media handling, vendors and telecom providers coordination.",
             "Developed IT manuals and procedures, provided orientation training for new users.",
           ]}
         />
-
         <Section
           jobTitle="IT Service Desk"
           workPlace="Agip KCO, Kazakhstan"
-          date="Aug 2007 – Mar 2008"
+          date="Aug 2007 - Mar 2008"
           details={[
             "User support (remote and desk side).",
             "Supported Win 2003, AD and MS Exchange servers and SAP application.",
             "Installation and maintenance of workstations and a variety of network equipment, printers, MFP devices, and scanners.",
           ]}
         />
-
         <Section
-          jobTitle="IT & Telecom Infrastructure Analyst"
+          jobTitle="IT & Telecom Analyst"
           workPlace="Karachaganak Petroleum"
-          date="Jan 2007 – Jul 2007"
+          date="Jan 2007 - Jul 2007"
           details={[
             "Technical onsite support of computer systems and telecommunications on the pipeline terminal, including: VSAT, SDH, DWDM, hotlines, trunk radio, PBX, network switches, and routers.",
           ]}

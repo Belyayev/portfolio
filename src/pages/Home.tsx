@@ -6,7 +6,7 @@ import { CSSProperties } from "react";
 
 function Home() {
   return (
-    <div style={{ padding: "0 1rem" }}>
+    <div>
       <div className="home">
         <div>
           <div className="stack" style={{ "--stacks": 3 } as CSSProperties}>
@@ -63,8 +63,7 @@ function Home() {
           decision-making, problem-solving, and the ability to create
           data-driven applications.
         </p>
-
-        <p>Check out my projects page to see what I've been up to!</p>
+        <p>Check out my portfolio page to see what I've been up to!</p>
       </div>
     </div>
   );

@@ -11,8 +11,7 @@
 
 .section-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   cursor: pointer;
   padding: 1rem 0.5rem;
 }
@@ -55,5 +54,16 @@ ul {
 
   li {
     line-height: 2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 0.5rem;
   }
 }
