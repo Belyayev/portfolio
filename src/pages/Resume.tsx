@@ -34,17 +34,17 @@ function Resume() {
       </div>
       <div className="resume">
         <div className="block">
-          <h1>
+          <div>
             <span className="textLabel">Objective:</span>
             <span className="textRegular">
               Software Developer, Data Engineer
             </span>
-          </h1>
+          </div>
         </div>
         <div className="block">
-          <h1>
-            <span className="textLabel">Qualifications:</span>
-          </h1>
+          <div className="textLabel" style={{ marginBottom: "1rem" }}>
+            Qualifications:
+          </div>
           <ul>
             <li>
               Over 4 years of comprehensive experience in full-stack web
@@ -63,9 +63,7 @@ function Resume() {
           </ul>
         </div>
         <div>
-          <h1>
-            <span className="textLabel">Experience:</span>
-          </h1>
+          <div className="textLabel">Experience:</div>
         </div>
         <Section
           jobTitle="Data Engineer"
@@ -152,9 +150,9 @@ function Resume() {
           ]}
         />
         <div className="block">
-          <h1 style={{ marginBottom: "1rem" }}>
+          <div style={{ marginBottom: "1rem" }}>
             <span className="textLabel">Education:</span>
-          </h1>
+          </div>
           <div className="job-title">
             Bachelor of Science, in Mechanical Engineering
           </div>

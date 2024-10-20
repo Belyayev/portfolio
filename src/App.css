@@ -136,15 +136,13 @@ p {
 
 .contacts {
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .contact-card {
   display: flex;
-  width: 80%;
+  width: 90vw;
   max-width: 30rem;
   margin: 0.5rem;
   animation: fade-in 1s forwards;
@@ -272,12 +270,6 @@ footer {
     text-indent: 2rem;
     line-height: 1.7rem;
   }
-
-  .contacts {
-    display: flex;
-    width: 80%;
-    margin: auto;
-  }
   .title {
     margin: 1rem;
   }
@@ -388,7 +380,7 @@ footer {
   font-weight: bold;
   grid-row-start: 1;
   grid-column-start: 1;
-  font-size: 4rem;
+  font-size: 3rem;
   --stack-height: calc(100% / var(--stacks) - 1px);
   --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
   --clip-top: calc(var(--stack-height) * var(--index));

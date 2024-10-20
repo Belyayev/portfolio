@@ -38,11 +38,14 @@
 .textRegular {
   margin-left: 1rem;
   font-weight: 100;
+  font-size: 1.4rem;
 }
 
 .textLabel {
   color: aqua;
   text-decoration: underline;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .block {
