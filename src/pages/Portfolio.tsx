@@ -16,9 +16,15 @@ function Portfolio() {
         </div>
         <div className="project-text">
           <div>
-            Live demo (production):{" "}
-            <a href="https://freeshoppinglist.vercel.app" target="blank">
-              https://freeshoppinglist.vercel.app
+            Application link:
+            <a href="https://freeshoppinglist.vercel.app/" target="blank">
+              https://freeshoppinglist.vercel.app/
+            </a>
+          </div>
+          <div>
+            Live demo (video):{" "}
+            <a href="https://youtu.be/4m1WAmEeqg8" target="blank">
+              https://youtu.be/4m1WAmEeqg8
             </a>
           </div>
           <div>
